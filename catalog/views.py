@@ -45,3 +45,15 @@ def update_course(request, course_id):
     return render(request, 'catalog/update_course.template.html', {
         'form':update_course_form
     })
+    
+    # --Delete--
+def confirm_delete_course(request, course_id):
+    course_being_deleted = get_object_or_404(Course, pk=course_id)
+    return render(request, 'catalog/confirm_delete_course.template.html', {
+        'course':course_being_deleted
+    })
+    
+def actually_delete_course(request, course_id):
+    course_being_deleted = get_object_or_404(Course, pk=course_id)
+    course_being_deleted.delete()
+    return redirect(reverse('show_courses'))
