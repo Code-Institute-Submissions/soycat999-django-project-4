@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
+{% load crispy_forms_tags %}
+
 
 {%block content%}
-    <title>Document</title>
-</head>
 {{form.media}}
 <body>
     <form method='POST' enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form|crispy }}
         <input type='submit' value='Create Course'/>
     </form>
 {% endblock %}
