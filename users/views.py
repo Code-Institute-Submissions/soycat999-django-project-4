@@ -17,7 +17,7 @@ def signup(request):
             return redirect('home')
     else:
         form = UserCreationForm()
-    return render(request, 'signup.html', {'form': form})
+    return render(request, 'signup.template.html', {'form': form})
             
 @login_required
 def profile(request):
