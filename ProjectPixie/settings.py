@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'catalog',
     'pyuploadcare.dj',
     'crispy_forms',
+    'users',
     
 ]
 
@@ -143,3 +144,5 @@ UPLOADCARE = {
 # redirect for login
 
 LOGIN_REDIRECT_URL = '/catalog'
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
