@@ -3,4 +3,5 @@ from .views import home  # .views refer to the views.py in the current directory
 
 urlpatterns = [
     path('', home, name='home'),
+    
 ]
