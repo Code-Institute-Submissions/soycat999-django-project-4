@@ -1,61 +1,62 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from .models import Course
-from .forms import CourseForm
+from .models import Games
+from .forms import GamesForm
 
 # Create your views here.
-def show_courses(request):
-    all_courses = Course.objects.all()
-    return render(request, 'catalog/courses.template.html', {
-        'all_courses':all_courses
+def show_games(request):
+    all_games = Games.objects.all()
+    return render(request, 'catalog/games.template.html', {
+        'all_games':all_games
     })
     
     
     
-def create_course(request):
+def create_games(request):
     if request.method == 'POST':
-        create_course_form = CourseForm(request.POST)
-        if create_course_form.is_valid():  
-            newly_created_course = create_course_form.save()
-            messages.success(request, "Course " + newly_created_course.title + " has been created!")
+        create_games_form = GamesForm(request.POST)
+        if create_games_form.is_valid():  
+            # flash message
+            newly_created_games = create_games_form.save()
+            messages.success(request, "Games" + newly_created_games.title + " has been created!")
             
-            return redirect(reverse(show_courses))
+            return redirect(reverse(show_games))
        
     else:
-        create_course_form = CourseForm()
+        create_games_form = GamesForm()
     
-    return render(request, 'catalog/create_course.template.html', {
-        'form':create_course_form
+    return render(request, 'catalog/create_games.template.html', {
+        'form':create_games_form
     })
     
     # --Update--
     
-def update_course(request, course_id):
-    course_being_updated = get_object_or_404(Course, pk=course_id)
+def update_games(request, games_id):
+    games_being_updated = get_object_or_404(Games, pk=games_id)
     
     
     if request.method == "POST":
         
-      update_course_form = CourseForm(request.POST, instance=course_being_updated)
-      if update_course_form.is_valid():
-          update_course_form.save()
-          return redirect(reverse(show_courses))
+      update_games_form = GamesForm(request.POST, instance=games_being_updated)
+      if update_games_form.is_valid():
+          update_games_form.save()
+          return redirect(reverse(show_games))
             
     else:
-        update_course_form = CourseForm(instance=course_being_updated)
+        update_games_form = GamesForm(instance=games_being_updated)
         
-    return render(request, 'catalog/update_course.template.html', {
-        'form':update_course_form
+    return render(request, 'catalog/update_games.template.html', {
+        'form':update_games_form
     })
     
     # --Delete--
-def confirm_delete_course(request, course_id):
-    course_being_deleted = get_object_or_404(Course, pk=course_id)
-    return render(request, 'catalog/confirm_delete_course.template.html', {
-        'course':course_being_deleted
+def confirm_delete_games(request, games_id):
+    games_being_deleted = get_object_or_404(Games, pk=games_id)
+    return render(request, 'catalog/confirm_delete_games.template.html', {
+        'games':games_being_deleted
     })
     
-def actually_delete_course(request, course_id):
-    course_being_deleted = get_object_or_404(Course, pk=course_id)
-    course_being_deleted.delete()
-    return redirect(reverse('show_courses'))
+def actually_delete_games(request, games_id):
+    games_being_deleted = get_object_or_404(Games, pk=games_id)
+    games_being_deleted.delete()
+    return redirect(reverse('show_games'))

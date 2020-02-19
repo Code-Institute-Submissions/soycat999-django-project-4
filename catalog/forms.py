@@ -1,9 +1,9 @@
 from django import forms
-from .models import Course
+from .models import Games
 
 from pyuploadcare.dj.forms import ImageField
 
-class CourseForm(forms.ModelForm):
+class GamesForm(forms.ModelForm):
     class Meta:
-        model=Course
-        fields=('title', 'desc', 'number_of_hours', 'instructor', 'image')
+        model=Games
+        fields=('title', 'desc', 'price', 'publisher', 'release_date', 'category', 'image')
