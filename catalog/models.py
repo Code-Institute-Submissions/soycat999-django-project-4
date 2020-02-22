@@ -4,8 +4,8 @@ from datetime import datetime
 
 # Create your models here.
 class Category(models.Model):
-    title = models.CharField(blank=False, max_length=100)
-    last_name = models.CharField(blank=False, max_length=100)
+    Genre = models.CharField(blank=False, max_length=100)
+    Tags = models.CharField(blank=False, max_length=100)
     
     def __str__(self):
         return self.title
