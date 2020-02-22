@@ -80,7 +80,40 @@ width: 100px;
 
 /*---logo---*/
 
-.img {
-  position: absolute;
+/*.img {*/
+/*  position: absolute;*/
 
+/*}*/
+
+/*---JS for custom carousel---*/
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 100%;
+    margin: auto;
+  }
+  
+ 
+  .container:hover .middle {
+  opacity: 1;
 }
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+ 
+}
+
+.text {
+font-family: 'Orbitron', sans serif;
+  background: #34ebeb;
+  color: black;
+  font-size: 16px;
+  padding: 16px 32px;
+  text-align: center;
+}
+  
