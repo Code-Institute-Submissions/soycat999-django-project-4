@@ -1,5 +1,13 @@
-body {
-    background-color: blue;
+.body {
+    margin: 0%;
+    width: 0%;
+    padding: 0%;
+    color: black;
+}
+
+.body container {
+    display: flex;
+    width: 100%;
 }
 
 /*---css for nav overlay---*/
@@ -57,15 +65,22 @@ body {
 
 
 .hamburger {
-position:top;
+/*position:fixed;*/
+/*display: flex;*/
 font-size:30px;
 cursor:pointer;
 color:orange;
 /*color:white;*/
 float:right;
-padding: 10px;
-width: 50px;
+width: 100px;
 
 }
 
 /*---end of css nav overlay---*/
+
+/*---logo---*/
+
+.img {
+  position: absolute;
+
+}
