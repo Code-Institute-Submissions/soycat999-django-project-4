@@ -2,13 +2,15 @@
     margin: 0%;
     width: 0%;
     padding: 0%;
-    color: black;
+    font-family: 'Orbitron', sans serif;
+
 }
 
-.body container {
-    display: flex;
-    width: 100%;
+body.mybody{
+  background-color: black;
+  
 }
+
 
 /*---css for nav overlay---*/
 
@@ -37,13 +39,15 @@
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #635f60;
+  color: #34ebeb;
   display: block;
   transition: 0.3s;
+  font-family: 'Orbitron', sans serif;
+
 }
 
 .overlay a:hover, .overlay a:focus {
-  color: #ffab36;
+  color: #34ebeb;
 }
 
 .overlay .closebtn {
@@ -69,10 +73,11 @@
 /*display: flex;*/
 font-size:30px;
 cursor:pointer;
-color:orange;
+color:#34ebeb;
 /*color:white;*/
 float:right;
-width: 100px;
+width: 50px;
+
 
 }
 
@@ -80,17 +85,22 @@ width: 100px;
 
 /*---logo---*/
 
-/*.img {*/
-/*  position: absolute;*/
+div.logo {
+  position:fixed !important;
+}
 
-/*}*/
+@media screen and (min-width: 300px){
+  
+}
 
 /*---JS for custom carousel---*/
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-    width: 100%;
     margin: auto;
-  }
+    display: block;
+    max-width: 50%;
+    height: auto;
+}
   
  
   .container:hover .middle {
