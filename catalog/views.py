@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from .models import Games
+from .models import Games, Category
 from .forms import GamesForm
 
 # Create your views here.
@@ -60,3 +60,9 @@ def actually_delete_games(request, games_id):
     games_being_deleted = get_object_or_404(Games, pk=games_id)
     games_being_deleted.delete()
     return redirect(reverse('show_games'))
+    
+def show_category(request):
+    all_category = Category.objects.all()
+    return render(request, 'catalog/catalog.template.html', {
+        'all_category':all_category
+    })
