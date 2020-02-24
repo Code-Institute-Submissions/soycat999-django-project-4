@@ -10,10 +10,10 @@ def add_to_cart(request, games_id):
     # if the key does not exist in the session
     cart = request.session.get('shopping_cart', {})
     
-    # we check if the course_id is not in the cart. If so, we will add it
+    # we check if the games_id is not in the cart. If so, we will add it
     if games_id not in cart:
         games = get_object_or_404(Games, pk=games_id)
-        # course is found, let's add it to the cart
+        # games is found, let's add it to the cart
         cart[games_id] = {
             'id':games_id,
             'title': games.title,
