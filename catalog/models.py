@@ -8,7 +8,7 @@ class Category(models.Model):
     Tags = models.CharField(blank=False, max_length=100)
     
     def __str__(self):
-        return self.title
+        return self.Genre
     class Meta:
         verbose_name_plural = "Categories"
 
