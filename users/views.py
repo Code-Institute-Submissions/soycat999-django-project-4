@@ -2,6 +2,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from .models import Reviews
 
 
 # Create your views here.
@@ -24,3 +25,10 @@ def profile(request):
     return render(request, 'users/profile.template.html',{
         'current_user':request.user
     })
+
+def reviews(request):
+    all_reviews = Reviews.objects.all()
+    return render(request, 'users/reviews.template.html',{
+        'all_reviews':all_reviews
+    })
+    
