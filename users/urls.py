@@ -6,5 +6,5 @@ urlpatterns = [
     path('signup', signup ),
     path('profile', profile),
     path('reviews', reviews),
-  
+
 ]
