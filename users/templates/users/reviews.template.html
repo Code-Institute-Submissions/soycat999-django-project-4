@@ -5,11 +5,11 @@
     <h1>Community Reviews</h1>
     <ul>
     {% for c in all_reviews %}
-        <li>{{c.Username}}</li>
-        <li>{{c.Title}}</li>
-        <li>{{c.Rating}}</li> 
-        <li>{{c.Reviews}}</li> 
-        <li>{{c.Image}}</li> 
+        <li>Username: {{c.username}}</li>
+        <li>Title of Game: {{c.game_title}}</li>
+        <li>User Rating: {{c.rating}}</li> 
+        <li>User Review: {{c.reviews}}</li>
+        <li>Posted on: {{c.posted_on}}</li>
     {% endfor %}
     </ul>
 {% endblock %}
