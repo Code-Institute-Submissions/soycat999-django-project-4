@@ -5,9 +5,9 @@ from .views import show_games,show_category, create_games, update_games, confirm
 
 urlpatterns = [
     path('', show_games, name='show_games'),
-    path('create', create_games),
+    path('create', create_games,name='create_games'),
     path('update/<games_id>', update_games, name='update_games'),
-    path('confirm_delete/<games_id>', confirm_delete_games),
+    path('confirm_delete/<games_id>', confirm_delete_games, name='confirm_delete'),
     path('actually_delete/<games_id>', actually_delete_games, name='delete_games'),
     path('category', show_category, name='show_category'),
 ]
