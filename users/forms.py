@@ -6,4 +6,4 @@ from pyuploadcare.dj.forms import ImageField
 class ReviewsForm(forms.ModelForm):
     class Meta:
         model=Reviews
-        fields=('username', 'game_title', 'rating', 'reviews', 'posted_on')
+        fields=('username', 'title', 'rating', 'reviews', 'posted_on')
