@@ -6,12 +6,13 @@
     <ul>
     {% for c in all_reviews %}
         <li>Username: {{c.username}}</li>
-        <li>Title of Game: {{c.game_title}}</li>
+        <li>Title: {{c.title}}</li>
         <li>User Rating: {{c.rating}}</li> 
         <li>User Review: {{c.reviews}}</li>
         <li>Posted on: {{c.posted_on}}</li>
+        <li><a href='{% url "delete_reviews" reviews_id=c.id %}'>Delete</a></li>
     {% endfor %}
-<a href="/users/create_reviews">
+<a href="/users/reviews">
    <input type="button" value="Add Reviews" />
 </a>    </ul>
 {% endblock %}
