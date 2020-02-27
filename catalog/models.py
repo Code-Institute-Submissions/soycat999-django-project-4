@@ -19,7 +19,7 @@ class Games(models.Model):
     publisher = models.CharField(blank=False, max_length=100)
     release_date = models.DateTimeField(default=datetime.now, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    image = ImageField(null=True)
+    image = ImageField(blank=True, null=True)
     
     def __str__(self):
         return self.title
