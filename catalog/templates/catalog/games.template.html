@@ -5,7 +5,7 @@
     <h1>Games</h1>
     <ul>
     {% for c in all_games %}
-        <li>{{c.title}} under category: {{c.category.title}}
+        <li>{{c.title}}
         {%if c.image %}
         <img src="{{c.image.cdn_url}}"/>
         {%endif%}
