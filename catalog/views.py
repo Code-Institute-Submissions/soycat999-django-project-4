@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import Games, Category
 from .forms import GamesForm
 
@@ -11,7 +12,7 @@ def show_games(request):
     })
     
     
-    
+@login_required    
 def create_games(request):
     if request.method == 'POST':
         create_games_form = GamesForm(request.POST)
@@ -30,7 +31,8 @@ def create_games(request):
     })
     
     # --Update--
-    
+
+@login_required    
 def update_games(request, games_id):
     games_being_updated = get_object_or_404(Games, pk=games_id)
     
@@ -50,12 +52,13 @@ def update_games(request, games_id):
     })
     
     # --Delete--
+@login_required
 def confirm_delete_games(request, games_id):
     games_being_deleted = get_object_or_404(Games, pk=games_id)
     return render(request, 'catalog/confirm_delete_games.template.html', {
         'games':games_being_deleted
     })
-    
+@login_required    
 def actually_delete_games(request, games_id):
     games_being_deleted = get_object_or_404(Games, pk=games_id)
     games_being_deleted.delete()
