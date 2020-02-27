@@ -5,9 +5,10 @@ from catalog.models import Games
 
 
 def add_to_cart(request, games_id):
-    # attempt to get existing cart from the session using the key "shopping_cart"
-    # the second argument will be the default value if 
-    # if the key does not exist in the session
+    
+    games = get_object_or_404(Games, pk=games_id)
+    
+    
     cart = request.session.get('shopping_cart', {})
     
     # we check if the games_id is not in the cart. If so, we will add it
@@ -22,8 +23,27 @@ def add_to_cart(request, games_id):
         
         # save the cart back to sessions
         request.session['shopping_cart'] = cart
-        
-        messages.success(request, "Games has been added to your cart!")
-        return redirect('/catalog/')
+        messages.success(request, "You have added a new game!")
     else:
-        return redirect('/catalog/')
+        messages.success(request, "The course is already in your shopping cart")
+    return redirect('/catalog/')
+        
+def view_cart(request):
+    cart = request.session.get('shopping_cart', {})
+    return render(request, 'cart/view_cart.template.html', {
+        'shopping_cart': cart
+    })
+    
+def remove_from_cart(request, course_id):
+    # retrieve the cart from session
+    cart = request.session.get('shopping_cart',{})
+    
+    # if the course is in the cart
+    if course_id in cart:
+        # remove it from the cart
+        del cart[course_id]
+        # save back to the session
+        request.session['shopping_cart'] = cart
+        messages.success(request, "Item removed from cart successfully!")
+        
+    return redirect('/catalog/')
