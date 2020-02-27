@@ -4,6 +4,7 @@ from .models import Games
 from pyuploadcare.dj.forms import ImageField
 
 class GamesForm(forms.ModelForm):
+    image = ImageField(label="Cover Image")
     class Meta:
         model=Games
         fields=('title', 'desc', 'price', 'publisher', 'release_date', 'category', 'image')
