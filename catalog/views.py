@@ -11,7 +11,8 @@ def show_games(request):
         'all_games':all_games
     })
     
-    
+        # --Create--
+        
 @login_required    
 def create_games(request):
     if request.method == 'POST':
@@ -52,12 +53,14 @@ def update_games(request, games_id):
     })
     
     # --Delete--
+    
 @login_required
 def confirm_delete_games(request, games_id):
     games_being_deleted = get_object_or_404(Games, pk=games_id)
     return render(request, 'catalog/confirm_delete_games.template.html', {
         'games':games_being_deleted
     })
+    
 @login_required    
 def actually_delete_games(request, games_id):
     games_being_deleted = get_object_or_404(Games, pk=games_id)
