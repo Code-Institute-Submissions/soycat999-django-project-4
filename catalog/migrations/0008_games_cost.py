@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='games',
             name='cost',
-            field=models.FloatField(default=''),
+            field=models.FloatField(default=0),
         ),
     ]
