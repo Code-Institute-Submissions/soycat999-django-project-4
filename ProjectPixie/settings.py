@@ -25,7 +25,7 @@ SECRET_KEY = '-afc)g4vdavtlk#*2&il5fvhh$0uof9g$it11rxa0wy!u2ke+u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://django-angie.herokuapp.com/','*']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'users',
     'cart',
+    'checkout',
 
 ]
 
@@ -57,6 +58,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
 ]
 
 ROOT_URLCONF = 'ProjectPixie.urls'
@@ -137,6 +140,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
 UPLOADCARE_PUBLIC_KEY = os.environ['UPLOADCARE_PUBLIC_KEY']
 UPLOADCARE_SECRET_KEY = os.environ['UPLOADCARE_SECRET_KEY']
 
@@ -144,6 +150,10 @@ UPLOADCARE = {
     'pub_key': UPLOADCARE_PUBLIC_KEY,
     'secret': UPLOADCARE_SECRET_KEY,
 }
+
+STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
+
 
 # redirect for login
 
