@@ -3,8 +3,13 @@
 
 {%block content%}
     <h1>Community Reviews</h1>
-    <ul>
+     </br>
+    <a href="/users/create_reviews">
+   <input type="button" value="Add Reviews" />
+</a>
+    <ul style="list-style-type:none;">
     {% for c in all_reviews %}
+     </br>
         <li>Username: {{c.username}}</li>
         <li>Title: {{c.title}}</li>
         <li>User Rating: {{c.rating}}</li> 
@@ -12,7 +17,5 @@
         <li>Posted on: {{c.posted_on}}</li>
         <li><a href='{% url "delete_reviews" reviews_id=c.id %}'>Delete</a></li>
     {% endfor %}
-<a href="/users/reviews">
-   <input type="button" value="Add Reviews" />
-</a>    </ul>
+  </ul>
 {% endblock %}

@@ -10,8 +10,8 @@ div.container-fluid {
   color:#34ebeb;
 }
 
-body.mybody{
-  background-color: black;
+body.mybody {
+  background: black;
   
 }
 
@@ -125,9 +125,53 @@ div.logo {
 .text {
 font-family: 'Orbitron', sans serif;
   background: #34ebeb;
-  color: black;
-  font-size: 16px;
+  color: #000000;
+  font-size: 20px;
   padding: 16px 32px;
   text-align: center;
+} 
+
+
+/*---sticky social-icon bar---*/
+
+.div.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-  
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
+}

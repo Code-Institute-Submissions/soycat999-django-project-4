@@ -46,7 +46,7 @@ def create_reviews(request):
         if create_reviews_form.is_valid():  
             # flash message
             newly_created_reviews = create_reviews_form.save()
-            messages.success(request, "Reviews" + newly_created_reviews.title + " has been created!")
+            messages.success(request, "Reviews for" + " " + newly_created_reviews.title + " has been created!")
     return render(request, 'users/create_reviews.template.html', {
         'form':create_reviews_form
     }) 
