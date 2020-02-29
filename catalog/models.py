@@ -19,8 +19,11 @@ class Games(models.Model):
     publisher = models.CharField(blank=False, max_length=100)
     release_date = models.DateTimeField(default=datetime.now, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    image = ImageField(blank=True, null=True)
     
+    image = ImageField(blank=True, null=True)
+    cost = models.FloatField(blank=False)
+
+   
     def __str__(self):
         return self.title
     class Meta:
