@@ -1,0 +1,1 @@
+web: gunicorn ProjectPixie.wsgi:application
