@@ -12,13 +12,18 @@ def show_games(request):
     })
     
         # --Create--
-        
+def handle_uploaded_file(f):
+    with open('static/images/test_upload.jpg', 'wb+') as destination:
+        for chunk in f.chunks():
+            destination.write(chunk)
+            
 @login_required    
 def create_games(request):
     if request.method == 'POST':
-        create_games_form = GamesForm(request.POST)
+        create_games_form = GamesForm(request.POST, request.FILES)
         if create_games_form.is_valid():  
             # flash message
+            handle_uploaded_file(request.FILES['image'])
             newly_created_games = create_games_form.save()
             messages.success(request, "Games" + newly_created_games.title + " has been created!")
             
