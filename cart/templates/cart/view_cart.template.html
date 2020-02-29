@@ -3,11 +3,13 @@
 {%block content %}
 <h1>Your Cart</h1>
 <ul>
-    {%for i in cart %}
+    {%for id, games in cart.items %}
         <li>
-            Title of Game: {{i.title}}<br/>
-            ${{i.cost}}
+            Title of Game: {{games.title}}<br/>
+            Price: ${{games.cost}}
         </li>
     {%endfor%}
-</ul>
+    
+    <button type="submit" onclick="window.location='../checkout'">Checkout</button>
+</ul> 
 {%endblock %}
