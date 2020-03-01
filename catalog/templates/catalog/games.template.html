@@ -2,20 +2,54 @@
 
 
 {%block content%}
-    <h1>Games</h1>
+<div>
+
+<a href="{% url 'show_games' %}">Reset Search</a>
+
+<!--Dropdown Search-->
+<div class="container">
+    <div class="menu">
+        {% if not all_games %}
+        cannot find any match
+        {% endif %}
+        <form action="" method="GET">
+            <input class="form-control mr-sm-2" type="textbox" name="title" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  
+        </form>
+    
+
+  </div>
+</div>
+</div>
+</br>
+
+
+
+
+
+
+<h1>Games</h1>
+<br>
+<div class="container">
+<div class="row row-cols-1 row-cols-md-2">
      {% if user.is_authenticated %}
-    <a href="{% url 'create_games' %}">Create Game</a>
+    <a href="{% url 'create_games' %}" class='btn btn-warning'>Create Game</a>
      {% endif %}
     <ul>
     {% for c in all_games %}
-        <li>{{c.title}}
+    <br>
+    <div class="col mb-4">
+<div class="card">
+<img src="/{{c.image}}" width="200px" height="200px" />
+        <h5 class="card-title">{{c.title}}</h5>
+        <p class="card-text">{{c.price}}</p>
         {%if c.image %}
-        <img src="{{c.image.cdn_url}}">
         {%endif%}
         {% if user.is_authenticated %}
-        <a href="{% url 'update_games' games_id=c.id %}">Edit</a>
-        <a href="{% url 'confirm_delete' games_id=c.id %}">Delete</a>
-        <a href="{% url 'add_to_cart' games_id=c.id %}">Add to Cart</a>
+        <a href="{% url 'update_games' games_id=c.id %}" class='btn btn-success'>Edit</a>
+        <a href="{% url 'add_to_cart' games_id=c.id %}" class='btn btn-primary'>Add to Cart</a>
+        <a href="{% url 'confirm_delete' games_id=c.id %}" class='btn btn-danger'>Delete</a>
         {% endif %}
         </li>    
     {% endfor %}
