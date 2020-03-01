@@ -24,8 +24,8 @@ def checkout(request):
         games = get_object_or_404(Games, pk=id)
         line_items.append({
             'name': games.title,
-            'amount': int(games.cost*100), #convert to cents, in integer
-            'currency':'usd',
+            'amount': int(games.price*100), #convert to cents, in integer
+            'currency':'sgd',
             'quantity':1
         })
     
