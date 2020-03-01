@@ -1,4 +1,5 @@
 from django.contrib.auth import login, authenticate
+from django.contrib.auth import logout as dj_logout
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
@@ -32,6 +33,11 @@ def profile(request):
         'current_user':request.user
     })
 
+
+def logout(request):
+    dj_logout(request)
+    messages.success(request, "Logout successfully!")
+    return render(request, 'users/logout.html')
 def reviews(request):
     all_reviews = Reviews.objects.all()
     return render(request, 'users/reviews.template.html',{
