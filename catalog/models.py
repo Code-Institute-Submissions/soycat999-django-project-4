@@ -18,8 +18,7 @@ class Games(models.Model):
     release_date = models.DateTimeField(default=datetime.now, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     
-    image = models.ImageField(blank=True)
-    cost = models.FloatField(blank=False)
+    image = models.ImageField(blank=True, upload_to='static/images')
 
    
     def __str__(self):
