@@ -6,7 +6,11 @@
     {%for id, games in cart.items %}
         <li>
             Title of Game: {{games.title}}<br/>
-            Price: ${{games.cost}}
+            Price: ${{games.cost}}<br />
+            Subtotal: ${{games.subtotal}}<br />
+            <a href="/cart/add_qty/{{games.id}}">Add</a>
+            Quantity: {{games.qty}}
+            <a href="/cart/remove_qty/{{games.id}}">Reduce</a>
         </li>
     {%endfor%}
     
