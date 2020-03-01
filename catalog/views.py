@@ -7,6 +7,9 @@ from .forms import GamesForm
 # Create your views here.
 def show_games(request):
     all_games = Games.objects.all()
+    if 'title' in request.GET:
+        all_games = all_games.filter(title=request.GET.get('title'))
+        print("title received: ", request.GET.get('title'))
     return render(request, 'catalog/games.template.html', {
         'all_games':all_games
     })
