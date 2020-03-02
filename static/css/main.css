@@ -11,6 +11,7 @@ div.container-fluid {
 
 body.mybody {
   background: black;
+  font-size: 15px
 
 }
 
@@ -62,7 +63,7 @@ body.mybody {
 
 @media screen and (min-width: 300px){
   .overlay {overflow-y: auto;}
-  .overlay a {font-size: 25px}
+  .overlay a {font-size: 30px}
   .overlay .closebtn {
   font-size: 40px;
   top: 15px;
@@ -164,18 +165,31 @@ div.card-title card-text {
 /*---media queries for smartphones---*/
 
 @media screen and (min-width:320px){
-.about-text div.game-card-text {
-    font-size: 20px;
+.about-text p {
+    font-size: 25px;
   }
 }
 
 /*---media queries for text on screens more than 600px---*/
 @media screen and (max-width:600px) {
-.about-text div.game-card-text {
-  font-size: 40px;
+.about-text p {
+  font-size: 15px;
 }
 }
 
+
+@media screen and (min-width:320px){
+body.mybody{
+font-size: 25px;
+  }
+}
+
+/*---media queries for text on screens more than 600px---*/
+@media screen and (max-width:600px) {
+body.mybody{
+  font-size: 15px;
+}
+}
 
 .logout-text {
   font-family: 'Oxanium', sans serif;

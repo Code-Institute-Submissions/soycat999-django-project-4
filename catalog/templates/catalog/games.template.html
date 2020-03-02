@@ -10,6 +10,8 @@
 <div>
 
 <br>
+<h1>Games</h1>
+<br>
 <!--Dropdown Search-->
 <div class="container">
     <div class="menu">
@@ -36,8 +38,7 @@
 
 
 
-<h1>Games</h1>
-<br>
+
 <div class="container">
 <div class="row row-cols-1 row-cols-md-2">
      {% if user.is_authenticated %}
@@ -49,15 +50,15 @@
     <div class="col mb-4">
 <div class="card">
     <br>
-<img src="/{{c.image}}" width="200px" height="200px" />
+<img src="/{{c.image}}" width="400px" height="200px" />
 </div>
         <div class="game-card-text">
-        <h5 class="card-title"><strong>{{c.title}}</strong></h5>
-        <p class="card-text"><strong>Summary:</strong> {{c.desc}}</p>
-        <p class="card-text"><strong>Genre:</strong> {{c.category}}</p>
-        <p class="card-text"><strong>Publisher:</strong> {{c.publisher}}</p>
-        <p class="card-text"><strong>Release Date and Time:</strong> {{c.release_date}}</p>
-        <p class="card-text"><strong>Price:</strong> SGD {{c.price}}</p>
+        <h2 class="card-title"><strong>{{c.title}}</strong></h2>
+        <h3 class="card-text"><h3>Summary:</h3> {{c.desc}}</h3>
+        <h3 class="card-text"><h3>Genre:</h3> {{c.category}}</h3>
+        <h3 class="card-text"><h3>Publisher:</h3> {{c.publisher}}</h3>
+        <h3 class="card-text"><h3>Release Date and Time:</h2> {{c.release_date}}</h3>
+        <h3 class="card-text"><h3>Price:</h3> SGD {{c.price}}</h3>
         </div>
         {%if c.image %}
         {%endif%}
