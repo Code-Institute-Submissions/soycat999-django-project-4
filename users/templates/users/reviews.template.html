@@ -4,9 +4,9 @@
 {%block content%}
     <h1>Community Reviews</h1>
      </br>
-    <a href="/users/create_reviews">
-   <input type="button" value="Add Reviews" />
-</a>
+       {% if user.is_authenticated %}
+<a href="/users/create_reviews" class='btn btn-primary'>Add Reviews</a>
+  {% endif %}
     <ul style="list-style-type:none;">
     {% for c in all_reviews %}
      </br>
@@ -15,7 +15,10 @@
         <li>User Rating: {{c.rating}}</li> 
         <li>User Review: {{c.reviews}}</li>
         <li>Posted on: {{c.posted_on}}</li>
-        <li><a href='{% url "delete_reviews" reviews_id=c.id %}'>Delete</a></li>
+        <br>
+         {% if user.is_superuser %}
+        <li><a href='{% url "delete_reviews" reviews_id=c.id %}' class='btn btn-danger'>Delete</a></li>
+         {% endif %}
     {% endfor %}
   </ul>
 {% endblock %}
