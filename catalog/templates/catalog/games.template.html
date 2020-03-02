@@ -3,10 +3,12 @@
 
 
 {%block content%}
-<div>
 <head>
 <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
 </head>
+
+<div>
+
 <br>
 <!--Dropdown Search-->
 <div class="container">
@@ -49,12 +51,14 @@
     <br>
 <img src="/{{c.image}}" width="200px" height="200px" />
 </div>
-        <h5 style="font-size:6vw; font-family: 'Oxanium', sans serif" class="card-title"><strong>{{c.title}}</strong></h5>
-        <p  style="font-size:4vw; font-family: 'Oxanium', sans serif" class="card-text"><strong>Summary:</strong> {{c.desc}}</p>
-        <p  style="font-size:4vw; font-family: 'Oxanium', sans serif" class="card-text"><strong>Genre:</strong> {{c.category}}</p>
-        <p  style="font-size:4vw; font-family: 'Oxanium', sans serif" class="card-text"><strong>Publisher:</strong> {{c.publisher}}</p>
-        <p  style="font-size:4vw; font-family: 'Oxanium', sans serif" class="card-text"><strong>Release Date and Time:</strong> {{c.release_date}}</p>
-        <p style="font-size:4vw; font-family: 'Oxanium', sans serif"  class="card-text"><strong>Price:</strong> SGD {{c.price}}</p>
+        <div class="game-card-text">
+        <h5 class="card-title"><strong>{{c.title}}</strong></h5>
+        <p class="card-text"><strong>Summary:</strong> {{c.desc}}</p>
+        <p class="card-text"><strong>Genre:</strong> {{c.category}}</p>
+        <p class="card-text"><strong>Publisher:</strong> {{c.publisher}}</p>
+        <p class="card-text"><strong>Release Date and Time:</strong> {{c.release_date}}</p>
+        <p class="card-text"><strong>Price:</strong> SGD {{c.price}}</p>
+        </div>
         {%if c.image %}
         {%endif%}
         {% if user.is_authenticated %}

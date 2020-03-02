@@ -2,17 +2,16 @@
     margin: 0%;
     width: 0%;
     padding: 0%;
-    font-family: 'Orbitron', sans serif;
 }
 
 div.container-fluid {
-  font-family:'Orbitron', sans serif;
+  font-family:'Oxanium', sans serif;
   color:#34ebeb;
 }
 
 body.mybody {
   background: black;
-  
+
 }
 
 
@@ -46,7 +45,7 @@ body.mybody {
   color: #34ebeb;
   display: block;
   transition: 0.3s;
-  font-family: 'Orbitron', sans serif;
+  font-family: 'Oxanium', sans serif;
 
 }
 
@@ -139,7 +138,45 @@ div.card-title card-text {
   }
 }
 
+/*---styling for footer---*/
+
+ /*footer bar styling*/
+     
+    .footerbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
+
+    /*---footer styling---*/
+
+    div.textcopyright {
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-family: 'Oxanium', sans-serif;
+      background: teal;
+    }
 
 
+/*---media queries for smartphones---*/
+
+@media screen and (min-width:320px){
+.about-text div.game-card-text {
+    font-size: 20px;
+  }
+}
+
+/*---media queries for text on screens more than 600px---*/
+@media screen and (max-width:600px) {
+.about-text div.game-card-text {
+  font-size: 40px;
+}
+}
 
 
+.logout-text {
+  font-family: 'Oxanium', sans serif;
+}
