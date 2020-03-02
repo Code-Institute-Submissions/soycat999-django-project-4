@@ -3,109 +3,38 @@
 
 {%block content%}
 
-  <!----logo---->
-<!--  <div class="container">-->
-<!--<div class="logo">-->
-<!--    <a href="/home"><img src="{% static 'images/logo.png' %}" title="logo" alt="logo"></a>-->
-<!--    </div>-->
-<!--</div>-->
+<head>
+<link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+</head>
+
+  <img src="{% static 'images/top-image.png' %}" alt="top" class= "top-image" width="200" height="200">
 
 
-
-<!--// Custom carousel-->
-<br>
-<br>
-<br>
 <br>
 
+<div class="container"
+<h1 style="font-size:5vw;">PIXIE GAMES</h1>
+<br>
 
-<div class="container">
-    <div id="myCarousel" class="carousel slide">
+<p style="font-size:2vw; font-family: 'Oxanium', sans serif ;">We’ve been expecting you…
 
-    <ol class="carousel-indicators">
-      <li class="item1 active"></li>
-      <li class="item2"></li>
-      <li class="item3"></li>
-      <li class="item4"></li>
-    </ol>
+You sure took your own sweet time getting here didn’t you?
+<br>
+<br>
+Now that you’re here, let us officially welcome you to the ultimate destination for selling and discussing online games. 
+<br>
+<br>
+At Pixie Games we offer the hottest titles at the lowest prices. So what are you waiting for? 
+<br>
+<br>
+Browse our catalog and feast your eyes on the myriad of games available. Keep your eyes peeled for our discounted merchandise (available for limited time only). 
+<br>
+<br>
+Got something to say about your favourite game? Head on down to our Community Reviews to contribute your opinion and be a part of something larger. 
+</p>
 
-<!-- Wrapper for slides -->
-
-    <div class="container">
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-      
- 
-        <img src="{% static 'images/logo.png' %}" alt="latestnews" width="460" height="345">
-        
-        <div class="middle">
-    <div class="text">
-      <p><a href="https://www.pcgamer.com/news/" target="_blank">Latest News</a><p>
-      </div>
-  </div>
-  </div>
-  
-
-      <div class="item">
-        <img src="{% static 'images/logo.png' %}" alt="livegames" width="460" height="345">
-        <div class="middle">
-    <div class="text">
-          <p><a href="https://www.twitch.tv/" target="_blank">Stream Live Games</a><p>
-      </div>
-  </div>
-      </div>
- 
-    
-      <div class="item">
-        <img src="{% static 'images/logo.png' %}" alt="community" width="460" height="345">
-        <div class="middle">
-    <div class="text">
-          <p><a href="https://www.reddit.com/r/pcgaming/" target="_blank">Community</a><p>
-    </div>
-      </div>
-      </div>
-     
-      <div class="item">
-        <img src="{% static 'images/logo.png' %}" alt="upcominggames" width="460" height="345">
-        <div class="middle">
-    <div class="text">
-            <p><a href="https://www.gamesradar.com/upcoming-games-2020/" target="_blank">Upcoming Games</a><p>
-    </div>
-      </div>
-    </div>
 </div>
-</div>
-<!--Custom JS for carousel-->
 
-<script>
-$(document).ready(function(){
-  // Activate Carousel
-  $("#myCarousel").carousel();
-    
-  // Enable Carousel Indicators
-  $(".item1").click(function(){
-    $("#myCarousel").carousel(0);
-  });
-  $(".item2").click(function(){
-    $("#myCarousel").carousel(1);
-  });
-  $(".item3").click(function(){
-    $("#myCarousel").carousel(2);
-  });
-  $(".item4").click(function(){
-    $("#myCarousel").carousel(3);
-  });
-  
-// Enable Carousel Controls
-  $(".left").click(function(){
-    $("#myCarousel").carousel("prev");
-  });
-  $(".right").click(function(){
-    $("#myCarousel").carousel("next");
-  });
-});
 
-</script>
-
-<div
 {% endblock %}
+
