@@ -50,8 +50,10 @@
     <div class="col mb-4">
 <div class="card">
     <br>
-<img src="/{{c.image}}" width="400px" height="200px" />
+<img src="/{{c.image}}" width="100%" height="200px" />
 </div>
+
+<div class="container-fluid">
         <div class="game-card-text">
         <h2 class="card-title"><strong>{{c.title}}</strong></h2>
         <h3 class="card-text"><h3>Summary:</h3> {{c.desc}}</h3>
@@ -59,6 +61,7 @@
         <h3 class="card-text"><h3>Publisher:</h3> {{c.publisher}}</h3>
         <h3 class="card-text"><h3>Release Date and Time:</h2> {{c.release_date}}</h3>
         <h3 class="card-text"><h3>Price:</h3> SGD {{c.price}}</h3>
+        </div>
         </div>
         {%if c.image %}
         {%endif%}
