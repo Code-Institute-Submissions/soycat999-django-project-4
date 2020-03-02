@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 
+
 {% block content %}
+
+<head>
+<link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+</head>
+
+<div class=logout-text>
   <p>Logged out!</p>  
   <a href="{% url 'login'%}">Click here to login again.</a>
+  </div>
 {% endblock %}

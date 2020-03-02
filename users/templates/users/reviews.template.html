@@ -2,10 +2,11 @@
 
 
 {%block content%}
-<div>
 <head>
 <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
 </head>
+<div>
+
 
     <h1>Community Reviews</h1>
      </br>
@@ -15,11 +16,13 @@
     <ul style="list-style-type:none;">
     {% for c in all_reviews %}
      </br>
-        <li style="font-size:4vw; font-family: 'Oxanium', sans serif"><strong>Username:</strong> {{c.username}}</li>
-        <li style="font-size:4vw; font-family: 'Oxanium', sans serif"><strong>Title:</strong> {{c.title}}</li>
-        <li style="font-size:4vw; font-family: 'Oxanium', sans serif"><strong>User Rating:<strong> {{c.rating}}</li> 
-        <li style="font-size:4vw; font-family: 'Oxanium', sans serif"><strong>User Review:<strong> {{c.reviews}}</li>
-        <li style="font-size:4vw; font-family: 'Oxanium', sans serif"><strong>Posted on:<strong> {{c.posted_on}}</li>
+     <div class="text-review">
+        <li <strong>Username:</strong> {{c.username}}</li>
+        <li <strong>Title:</strong> {{c.title}}</li>
+        <li <strong>User Rating:<strong> {{c.rating}}</li> 
+        <li <strong>User Review:<strong> {{c.reviews}}</li>
+        <li <strong>Posted on:<strong> {{c.posted_on}}</li>
+        </div>
         <br>
          {% if user.is_superuser %}
         <li><a href='{% url "delete_reviews" reviews_id=c.id %}' class='btn btn-danger'>Delete</a></li>
