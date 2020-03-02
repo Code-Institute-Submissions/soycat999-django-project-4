@@ -16,7 +16,7 @@ def show_games(request):
     
         # --Create--
 def handle_uploaded_file(f):
-    with open('static/images/test_upload.jpg', 'wb+') as destination:
+    with open('static/images/test_update.jpg', 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
             
@@ -48,9 +48,10 @@ def update_games(request, games_id):
     
     if request.method == "POST":
         
-      update_games_form = GamesForm(request.POST, instance=games_being_updated)
+      update_games_form = GamesForm(request.POST, request.FILES or None, instance=games_being_updated)
       if update_games_form.is_valid():
-          update_games_form.save()
+          edit = update_games_form.save(commit=False)
+          edit.save()
           return redirect(reverse(show_games))
             
     else:
