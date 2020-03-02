@@ -14,6 +14,8 @@
         </li>
     {%endfor%}
     
-    <button type="submit" onclick="window.location='../checkout'">Checkout</button>
+    <br/>
+    <button type="submit" onclick="window.location='../checkout'" class='btn btn-success'>Checkout</button>
+    <a href="{% url 'show_games' %}" class='btn btn-primary'>Back To Games</a>
 </ul> 
 {%endblock %}
