@@ -36,7 +36,7 @@ def profile(request):
 
 def logout(request):
     dj_logout(request)
-    messages.success(request, "Logout successfully!")
+    messages.success(request, "Logged out successfully!")
     return render(request, 'users/logout.html')
 def reviews(request):
     all_reviews = Reviews.objects.all()
