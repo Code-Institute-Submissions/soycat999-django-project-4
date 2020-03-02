@@ -125,3 +125,21 @@ font-family: 'Orbitron', sans serif;
   width: 100%;
   height: auto;
 }
+
+
+/*---media queries for custom javascript carousel---*/
+
+
+/* Responsive layout - makes the 
+three columns stack on top of each 
+other instead of next to each other */
+@media screen and (max-width: 500px) {
+div.card-title card-text {
+    width: 100%;
+  }
+}
+
+
+
+
+
