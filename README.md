@@ -23,13 +23,17 @@ A live demo of the website can be found here: https://django-angie.herokuapp.com
 
 ## Project Structure
 ### (i) Overview
-- Homepage - The homepage has slideshow that showcases games sold on the website. Below that, there is a short description of the website and how the users can interact with it. There is also a collapsable navigation bar (hamburger menu) on the right-hand side of the website. 
+## Homepage 
+The homepage has slideshow that showcases games sold on the website. Below that, there is a short description of the website and how the users can interact with it. There is also a collapsable navigation bar (hamburger menu) on the right-hand side of the website. 
 
-- Game Catalog page - The games catalog page showcases all the games sold on the website.
+## Game Catalog Page 
+The games catalog page showcases all the games sold on the website.
 
-- Cart - Games can be reviewed by the user before user is ready to complete their purchase. 
+## Cart 
+Games can be reviewed by the user before user is ready to complete their purchase. 
 
-- Community Reviews - This page allows logged in users to leave reviews and unregistered users to read reviews posted.
+## Community Reviews 
+This page allows logged in users to leave reviews and unregistered users to read reviews posted.
 
 ### (ii) Wireframes here.
 
