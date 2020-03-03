@@ -37,7 +37,7 @@ View wireframes for both desktop and mobile here: https://docs.google.com/docume
 
 ## Project Skeleton
 ### (i) Existing Features
-Homepage - The slideshow gives users a peek into the games sold at the site. Additionally, the short introduction of the website gives users a little more detail about how to go about using the site.  There is a collapsable navigation bar on the top-right hand corner of the homepage. This was placed to give users an easier access to navigate the different pages easily and quickly. Upon clicking the icon, the icon will open a full screen overlay for users to see the different pages in the website. 
+- Homepage - The slideshow gives users a peek into the games sold at the site. Additionally, the short introduction of the website gives users a little more detail about how to go about using the site.  There is a collapsable navigation bar on the top-right hand corner of the homepage. This was placed to give users an easier access to navigate the different pages easily and quickly. Upon clicking the icon, the icon will open a full screen overlay for users to see the different pages in the website. 
 
 - Games Catalog - Bootstrap features such as cards were used to display information about each of the game sold on the site. Some of the information includes title, price, category, publisher, release date, etc. This will give users more information about the game before they add the game(s) to cart. User authentication  only allows logged in users to add games to cart, after which they will see a message pop-up that indicates that the game has been successfully added to the cart. Additionally, only the admin or superuser is able to create, edit, delete games. 
 
