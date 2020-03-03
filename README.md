@@ -25,9 +25,11 @@ A live demo of the website can be found here: https://django-angie.herokuapp.com
 ### (i) Overview
 - Homepage - The homepage has slideshow that showcases games sold on the website. Below that, there is a short description of the website and how the users can interact with it. There is also a collapsable navigation bar (hamburger menu) on the right-hand side of the website. 
 
-- About Game - The about section includes more information about the website. There is a short description about the game, its features and there is also a gallery of images.
+- Game Catalog page - The games catalog page showcases all the games sold on the website.
 
-- Buy Now - The buy now page includes links to the official PC and Console purchase pages. There is also a parallax image in the background and a sticky social media bar on the side of the page. 
+- Cart - Games can be reviewed by the user before user is ready to complete their purchase. 
+
+- Community Reviews - This page allows logged in users to leave reviews and unregistered users to read reviews posted.
 
 ### (ii) Wireframes here.
 
@@ -38,39 +40,48 @@ View wireframes for both desktop and mobile here: https://docs.google.com/docume
 - Homepage
 The slideshow gives users a peek into the games sold at the site. Additionally, the short introduction of the website gives users a little more detail about how to go about using the site.  There is a collapsable navigation bar on the top-right hand corner of the homepage. This was placed to give users an easier access to navigate the different pages easily and quickly. Upon clicking the icon, the icon will open a full screen overlay for users to see the different pages in the website. 
 
-- About
-Bootstrap features like cards were used to explain the various features of the gameplay. Another Bootstrap feature that was used in the about page was the carousel images, to showcase the screenshots taken from the game. The image under the Expansion Pack section is a link to the official video game page, which gives more information. 
+- Games Catalog
+Bootstrap features such as cards were used to display information about each of the game sold on the site. Some of the information includes title, price, category, publisher, release date, etc. This will give users more information about the game before they add the game(s) to cart. User authentication  only allows logged in users to add games to cart, after which they will see a message pop-up that indicates that the game has been successfully added to the cart. Additionally, only the admin or superuser is able to create, edit, delete games. 
 
-- Buy Now
-In the buy now page, users can visit the official social media sites to learn more about the game 
-and connect with the game community. Apart from that they will be able to purchase the game in the platform of their choice. At the bottom of the page, users will be able to input their email address and subscribe to the latest news and updates.
+- Cart/View Cart
+Only logged in users will be able to add games to their cart and view their cart before completing their purchase. Clicking on the view cart button will allow logged in users to view their cart and allow them to add or reduce their cart for each item. When reducing or adding more copies of the game on the view cart page, the users will be able to see the subtotal as soon as they add or reduce their items. 
+
+- Checkout
+Logged in users will then be able to checkout their items as soon as they are satisfied with their selections. Once they click on checkout, they will be redirected to stripe payment to complete their purchase. Once the payment is successful, a message will popup to show that the payment was successful and a unique steam ID has been sent to their email. 
+
+- Community Reviews
+Only admin/superuser will be able to delete reviews. Unregistered users can see user reviews but will not be able to leave reviews. 
 
 ### (ii) Features to implement in the future
-In the future, I would like to include more information about the expansion packs and the 
-season pass so as to give users more of a choice when it comes to what they want to buy. 
+In the future, I would like to create a function for the unique steam ID to be sent to the users email address once they have successfully completed payment. 
 
-In the about page, I would like to have more images and information about the different characters in the game. I also think including a buy now button will increase and drive sales.
+I would also like to include option to edit and update reviews. 
 
-I would also like to include more interactive elements in the buy now page that would achieve the end goal of persuading users to buy the game. These interactive elements could be in the form of image hover overlay, an animated buy now button, etc. 
+Another feature to implement in the future includes allowing registered and logged in users who have created their reviews to only edit and update their reviews - they will not be able to edit other users' reviews. 
+
+There should also be a contact form or form of contact that allows users to reach out via social media or directly to the admin. 
+
+Finally, I would like to include a profile page that allows users to access their profile, upload pictures, see their username and password. Registered users will also be able to edit, update and delete their profile. 
 
 ###Limitation 
-There is also a subscription form at the bottom of the page,
-although clicking on the submit button will not navigate away from the website. (There is no Javascript). This would be a feature to implement in the future.
+After checkout, users are only prompted with a message that they have completed their purchase successfully. No email confirmation is sent to their email address.
 
 ## Project Surface
 ### Design Choices
-(i) The color scheme of orange and black reflects the main theme of the overall game and hence why it is consistently used throughout the website. I also believe that the colour scheme will appeal to users.
-(ii) The font looks fun and appeals to gamers. It also reflects the game and the gameplay.
-(iii) A scrollable parallax image was included in the buy now page to give the webpage more depth. I also believe the juxtaposition of the image and the subscription form will enable and encourage users to buy and subscribe to the game. An active subscription is equally important as a purchase as it measures the individual's interest level and allows developers to push more news and updates to their email so as to attain the goal of a purchase if the user has not already bought the game. 
+(i) The color scheme of bright blue and black creates contrast to make it more eye-catching and outstanding to users. I also believe that the colour scheme appeals to users.
+(ii) The font was chosen to reflect a more "techy" feel of the website.
+(iii) Background image is black so that it doesn't distract users from the games displayed on the website.
 
 ## Technologies
 
-1. HTML (link to the documentation: https://devdocs.io/html/)
-HTML was used to structure the content of the website.
-2. CSS (link to the documentation: https://devdocs.io/css/)
-CSS was used to style the website.
+1. HTML — used to structure the content of the website (link to the documentation: https://devdocs.io/html/)
+2. CSS — used for styling the website (link to the documentation: https://devdocs.io/css/)
+3. Jinja — used for styling (link to the documentation: https://jinja.palletsprojects.com/en/2.11.x/)
 3. Bootstrap (link to the documentation: https://getbootstrap.com)
-4. Javascript — for the navigation bar. (link to the documentation: https://devdocs.io/jsdoc/)
+4. Javascript — for the navigation bar (link to the documentation: https://devdocs.io/jsdoc/)
+5. Python3 — (link to the documentation: https://docs.python.org/3/)
+6. Django — (link to the documentation: https://docs.djangoproject.com/en/3.0/)
+
 
 ## Testing
 (i) Mobile Responsiveness
@@ -85,71 +96,52 @@ Website tested on mobile and on laptop mode : https://drive.google.com/drive/fol
 This site was tested across multiple devices multiple mobile devices 
 (iPhone 4, 5, 7: Chrome and Safari, iPad, Samsung Galaxy) to ensure compatibility and responsiveness.)
 
-(iii) Additionally, parallax scrolling has been turned off for phones, as soon as the breakpoint hits min-device-width: 300px.
+(iii) User authentication restricts access and allows superusers/admin to create, edit and delete games. They will also be able to delete reviews.
 
-(iv) Under the subscription section, users will get a prompt in red if their email has not been entered in the correct format.
+(iv) User authentication restricts access and allows logged in users to add games to cart and create reviews. 
 
 (v) Test Cases 
 
 | Test Case(s)        | Description           | Outcome |
 | :------------- |:-------------| :-----|
-| 1      | When user clicks on home link on the top-right navigation bar, the website redirects to the home page. | Pass  |
-| 2      | When user clicks on about link on the top-right navigation bar, the website redirects to the about page. | Pass  |
-| 3      | When user clicks on home link on the top-right navigation bar, the website redirects to the buy now page. | Pass  |
-| 4      | User should see 3 buttons at the top corner of the navigation bar. | Pass  |
-| 5      | When user clicks on the linkable image under the Expansion Pack section in the about page, he/she will be directed to the official page which gives the user more information. | Pass  |
-| 6      | When user clicks on the linkable platforms (Steam, PS4, Xbox) in the buy now page, he/she will be directed to the official purchase page for each of the different platforms. | Pass  |
-| 7      |When user enters their email address in the wrong format, they will be prompted in red to re-type their email address. | Pass  |
-| 8      |All links in the website will open in a new tab using 'target="_blank"' | Pass  |
+| 1      | When user clicks on the Happy Browsing button on the bottom of the homepage, they will be re-directed to the games catalog page. | Pass  |
+| 2      | When user clicks on the hamburger icon, it will open a full-screen overlay to display the pages in the website. | Pass  |
+| 3      | When superuser clicks on the create game button, they will be re-directed to a form that allows them to create a game. | Pass  |
+| 4      | When superuser clicks on the edit or delete button, they are able to update the game and delete it if they choose to. | Pass  |
+| 5      | When a logged in user clicks add to cart, they will be able to view cart and review their purchase | Pass  |
+| 6      | Registered user wants to add or reduce items in cart. | Pass  |
+| 7      |Registered users can view the subtotal of items.| Pass  |
+| 8      |Registered users can checkout items and complete payment for their purchase.| Pass  |
+| 9     |Images throughout the website are responsive.| Pass  |
+
+
 
 ## Bugs Discovered
 No bugs found. 
 
 ### Media 
 
-Homepage video (Owned by  IGN's channel)
-Source: https://www.youtube.com/watch?v=9IM3YE0BZuo&t=16s
-
-Homepage logo
-Source: https://dyinglightgame.com/10in12/img/logo_dyinglight.png
-
-About page header picture
-Source: https://media.comicbook.com/2019/05/dying-light-1172647.jpeg
-Website: https://comicbook.com/
-
-Picture for the gameplay section
-Source: https://vignette.wikia.nocookie.net/dyinglight/images/9/92/DL_Kyle_Crane.jpg/revision/latest?cb=20150224125550&path-prefix=pl
-Website: https://dyinglight.fandom.com/pl/wiki/Kyle_Crane
-
-Expansion Pack image:
-Source: https://hb.imgix.net/dc7375193c4e0ab556a935ecbd288d52fd8a8666.jpg?auto=compress,format&fit=crop&h=353&w=616&s=88cbf97c9366bd4a0d49128763748348
-
-Parallax image
-Source: https://mp1st.com/wp-content/uploads/2019/09/Dying-Light-2-Post-Launch-Support.jpg
-Website: https://mp1st.com
-
-Footer rating:
-Source: https://www.esrb.org/wp-content/uploads/2019/04/Mature.svg
-
-
-All other photos were taken from the game via screenshots and screen recordings.
-All rights go to Techland, the game developer and Warner Bros. Interactive Entertainment, the publisher. 
+All images and game content were taken from https://store.steampowered.com/. 
+All rights goes to Steam, a video game digital distribution service by Valve.
 
 ### Acknowledgements
 
 W3Schools:
 
 1. Used an overlay for the navigation bar from W3Schools: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_overlay
-2. Used a sticky social bar from W3Schools: https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp
-3. Used parallax image from W3Schools: https://www.w3schools.com/howto/howto_css_parallax.asp
+2. Used responsive images from W3Schools: https://www.w3schools.com/howto/howto_css_image_responsive.asp
 
 Bootstrap features: 
 
 1. Used cards for the about page of the website : https://getbootstrap.com/docs/4.3/components/card/
 2. Used carousel for the about page of the website: https://getbootstrap.com/docs/4.3/components/carousel/
-3. Used form for the subscription section in the buy now page: https://getbootstrap.com/docs/4.3/components/forms/#overview
+
 
 Fonts:
 
 https://fonts.google.com.
+
+Stackoverflow for debugging and other programming questions:
+
+https://stackoverflow.com/
 
