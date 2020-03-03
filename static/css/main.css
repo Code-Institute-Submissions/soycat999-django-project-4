@@ -1,8 +1,5 @@
-.body {
-    margin: 0%;
-    width: 0%;
-    padding: 0%;
-}
+
+html, body {padding:0; margin:0; height:100%;}
 
 div.container-fluid {
   font-family:'Oxanium', sans serif;
@@ -151,23 +148,31 @@ div.card-title card-text {
 
  /*footer bar styling*/
      
-    .footerbar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
+div.footer {
+  position:absolute;
+  right: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: teal;
+  text-align: center;
+  font-family: 'Oxanium', sans-serif;
+  color: white;
 }
+
+
+
+
 
     /*---footer styling---*/
 
-    div.textcopyright {
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-family: 'Oxanium', sans-serif;
-      background: teal;
-    }
+    /*div.textcopyright {*/
+    /*  color: white;*/
+    /*  text-align: center;*/
+    /*  padding: 10px;*/
+    /*  font-family: 'Oxanium', sans-serif;*/
+    /*  background: teal;*/
+    /*  font-size: 20px;*/
+    /*}*/
 
 
 /*---media queries for smartphones---*/

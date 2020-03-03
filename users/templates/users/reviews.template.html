@@ -17,11 +17,11 @@
     {% for c in all_reviews %}
      </br>
      <div class="text-review">
-        <li <strong>Username:</strong> {{c.username}}</li>
-        <li <strong>Title:</strong> {{c.title}}</li>
-        <li <strong>User Rating:<strong> {{c.rating}}</li> 
-        <li <strong>User Review:<strong> {{c.reviews}}</li>
-        <li <strong>Posted on:<strong> {{c.posted_on}}</li>
+        <li><strong>Username:</strong> {{c.username}}</li>
+        <li><strong>Title:</strong> {{c.title}}</li>
+        <li><strong>User Rating:<strong> {{c.rating}}</li> 
+        <li><strong>User Review:<strong> {{c.reviews}}</li>
+        <li><strong>Posted on:<strong> {{c.posted_on}}</li>
         </div>
         <br>
          {% if user.is_superuser %}

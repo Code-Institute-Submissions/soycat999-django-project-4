@@ -27,6 +27,7 @@
     <a href="/catalog">Games</a>
     <a href="/users/reviews">Community Reviews</a>
 {% if user.is_authenticated %}
+    <a href="/cart/">Cart</a>
     <a href="/accounts/logout/">Logout</a>
     {% else %}
      <a href="/accounts/login">Login</a>
@@ -75,8 +76,7 @@ function closeNav() {
   <br>
    <!-----footer-copyright----->
     <footer>
-      <div class="footerbar"></div>
-    <div class="textcopyright">
+      <div class="footer">
       Copyright 2019. Website built by Angelia. All rights reserved. For educational purposes only.
     </div>
   </footer>
