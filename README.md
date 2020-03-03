@@ -23,17 +23,13 @@ A live demo of the website can be found here: https://django-angie.herokuapp.com
 
 ## Project Structure
 ### (i) Overview
-## Homepage 
-The homepage has slideshow that showcases games sold on the website. Below that, there is a short description of the website and how the users can interact with it. There is also a collapsable navigation bar (hamburger menu) on the right-hand side of the website. 
+- Homepage - The homepage has slideshow that showcases games sold on the website. Below that, there is a short description of the website and how the users can interact with it. There is also a collapsable navigation bar (hamburger menu) on the right-hand side of the website. 
 
-## Game Catalog Page 
-The games catalog page showcases all the games sold on the website.
+- Game Catalog Page - The games catalog page showcases all the games sold on the website.
 
-## Cart 
-Games can be reviewed by the user before user is ready to complete their purchase. 
+- Cart - Games can be reviewed by the user before user is ready to complete their purchase. 
 
-## Community Reviews 
-This page allows logged in users to leave reviews and unregistered users to read reviews posted.
+- Community Reviews - This page allows logged in users to leave reviews and unregistered users to read reviews posted.
 
 ### (ii) Wireframes here.
 
@@ -41,20 +37,15 @@ View wireframes for both desktop and mobile here: https://docs.google.com/docume
 
 ## Project Skeleton
 ### (i) Existing Features
-- Homepage
-The slideshow gives users a peek into the games sold at the site. Additionally, the short introduction of the website gives users a little more detail about how to go about using the site.  There is a collapsable navigation bar on the top-right hand corner of the homepage. This was placed to give users an easier access to navigate the different pages easily and quickly. Upon clicking the icon, the icon will open a full screen overlay for users to see the different pages in the website. 
+Homepage - The slideshow gives users a peek into the games sold at the site. Additionally, the short introduction of the website gives users a little more detail about how to go about using the site.  There is a collapsable navigation bar on the top-right hand corner of the homepage. This was placed to give users an easier access to navigate the different pages easily and quickly. Upon clicking the icon, the icon will open a full screen overlay for users to see the different pages in the website. 
 
-- Games Catalog
-Bootstrap features such as cards were used to display information about each of the game sold on the site. Some of the information includes title, price, category, publisher, release date, etc. This will give users more information about the game before they add the game(s) to cart. User authentication  only allows logged in users to add games to cart, after which they will see a message pop-up that indicates that the game has been successfully added to the cart. Additionally, only the admin or superuser is able to create, edit, delete games. 
+- Games Catalog - Bootstrap features such as cards were used to display information about each of the game sold on the site. Some of the information includes title, price, category, publisher, release date, etc. This will give users more information about the game before they add the game(s) to cart. User authentication  only allows logged in users to add games to cart, after which they will see a message pop-up that indicates that the game has been successfully added to the cart. Additionally, only the admin or superuser is able to create, edit, delete games. 
 
-- Cart/View Cart
-Only logged in users will be able to add games to their cart and view their cart before completing their purchase. Clicking on the view cart button will allow logged in users to view their cart and allow them to add or reduce their cart for each item. When reducing or adding more copies of the game on the view cart page, the users will be able to see the subtotal as soon as they add or reduce their items. 
+- Cart/View Cart - Only logged in users will be able to add games to their cart and view their cart before completing their purchase. Clicking on the view cart button will allow logged in users to view their cart and allow them to add or reduce their cart for each item. When reducing or adding more copies of the game on the view cart page, the users will be able to see the subtotal as soon as they add or reduce their items. 
 
-- Checkout
-Logged in users will then be able to checkout their items as soon as they are satisfied with their selections. Once they click on checkout, they will be redirected to stripe payment to complete their purchase. Once the payment is successful, a message will popup to show that the payment was successful and a unique steam ID has been sent to their email. 
+- Checkout - Logged in users will then be able to checkout their items as soon as they are satisfied with their selections. Once they click on checkout, they will be redirected to stripe payment to complete their purchase. Once the payment is successful, a message will popup to show that the payment was successful and a unique steam ID has been sent to their email. 
 
-- Community Reviews
-Only admin/superuser will be able to delete reviews. Unregistered users can see user reviews but will not be able to leave reviews. 
+- Community Reviews - Only admin/superuser will be able to delete reviews. Unregistered users can see user reviews but will not be able to leave reviews. 
 
 ### (ii) Features to implement in the future
 In the future, I would like to create a function for the unique steam ID to be sent to the users email address once they have successfully completed payment. 
@@ -73,7 +64,9 @@ After checkout, users are only prompted with a message that they have completed 
 ## Project Surface
 ### Design Choices
 (i) The color scheme of bright blue and black creates contrast to make it more eye-catching and outstanding to users. I also believe that the colour scheme appeals to users.
+
 (ii) The font was chosen to reflect a more "techy" feel of the website.
+
 (iii) Background image is black so that it doesn't distract users from the games displayed on the website.
 
 ## Technologies
