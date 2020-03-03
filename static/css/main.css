@@ -121,8 +121,16 @@ font-family: 'Orbitron', sans serif;
   text-align: center;
 } 
 
+
 .top-image {
   width: 100%;
+  height: auto;
+}
+
+
+/*---responsive images on games template---*/
+.responsive-img {
+  max-width: 100%;
   height: auto;
 }
 
