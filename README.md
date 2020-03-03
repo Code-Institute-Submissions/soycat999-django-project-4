@@ -1,6 +1,6 @@
 # Milestone Project: Pixie Games
 
-This project focuses on the website development for an e-commerce store that sells games and allows users to leave reviews. The website is designed to be intuitive and easy to navigate. It is targeted towards users interested in purchasing games and being involved in the community. The website aims to advertise the game in an appealing and positive manner which would drive sales. 
+This project focuses on the website development for an e-commerce store that sells games and allows users to leave reviews. The website is designed to be intuitive and easy to navigate. It is targeted towards users interested in purchasing games and being involved in the community. 
 
 ## Demo
 
@@ -17,17 +17,17 @@ A live demo of the website can be found here: https://django-angie.herokuapp.com
 | 3      | User would like to purchase the games of their choosing. | To include an add to cart button that allows users to add their games to cart.  |
 | 4      | User would like to review their items before they make the purchase. | To include a view cart page that displays all the games that the user has added to the cart.  |
 | 5      | User would like to add or reduce the number of copies of a particular game . | To include a add and reduce option for users to buy more copies or reduce the quantity when they click the add or minus buttons.  |
-| 6      | User would like to see the subtotal of their item. | To include subtotal function that shows the final cost of an item(s) when users add quantity or buy more than one game.  |
+| 6      | User would like to see the subtotal of their item. | To include a subtotal function that shows the final cost of an item(s) when users add quantity or buy more than one game.  |
 | 7      | User would like to go back to games catalog after reaching the cart | To include a button, linked to the games catalog page, next to the checkout. |
 | 8      | User would like to add reviews  | To include a form that allows users to add reviews after they click the add reviews button. |
 
 ## Project Structure
 ### (i) Overview
-- Homepage - The homepage has slideshow that showcases games sold on the website. Below that, there is a short description of the website and how the users can interact with it. There is also a collapsable navigation bar (hamburger menu) on the right-hand side of the website. 
+- Homepage - The homepage has a slideshow that showcases games sold on the website. Below that, there is a short description of the website and how the users can interact with it. There is also a collapsible navigation bar (hamburger menu) on the right-hand side of the website. 
 
 - Game Catalog Page - The games catalog page showcases all the games sold on the website.
 
-- Cart - Games can be reviewed by the user before user is ready to complete their purchase. 
+- Cart - Games can be reviewed by the user before the user is ready to complete their purchase. 
 
 - Community Reviews - This page allows logged in users to leave reviews and unregistered users to read reviews posted.
 
@@ -37,9 +37,9 @@ View wireframes for both desktop and mobile here: https://docs.google.com/docume
 
 ## Project Skeleton
 ### (i) Existing Features
-- Homepage - The slideshow gives users a peek into the games sold at the site. Additionally, the short introduction of the website gives users a little more detail about how to go about using the site.  There is a collapsable navigation bar on the top-right hand corner of the homepage. This was placed to give users an easier access to navigate the different pages easily and quickly. Upon clicking the icon, the icon will open a full screen overlay for users to see the different pages in the website. 
+- Homepage - The slideshow gives users a peek into the games sold at the site. Additionally, the short introduction of the website gives users a little more detail about how to go about using the site.  There is a collapsible  navigation bar on the top-right hand corner of the homepage. This was placed to give users easier access to navigate the different pages easily and quickly. Upon clicking the icon, the icon will open a full screen overlay for users to see the different pages in the website. 
 
-- Games Catalog - Bootstrap features such as cards were used to display information about each of the game sold on the site. Some of the information includes title, price, category, publisher, release date, etc. This will give users more information about the game before they add the game(s) to cart. User authentication  only allows logged in users to add games to cart, after which they will see a message pop-up that indicates that the game has been successfully added to the cart. Additionally, only the admin or superuser is able to create, edit, delete games. 
+- Games Catalog - Bootstrap features such as cards were used to display information about each of the games sold on the site. Some of the information includes title, price, category, publisher, release date, etc. This will give users more information about the game before they add the game(s) to cart. User authentication  only allows logged in users to add games to cart, after which they will see a message pop-up that indicates that the game has been successfully added to the cart. Additionally, only the admin or superuser is able to create, edit, delete games. 
 
 - Cart/View Cart - Only logged in users will be able to add games to their cart and view their cart before completing their purchase. Clicking on the view cart button will allow logged in users to view their cart and allow them to add or reduce their cart for each item. When reducing or adding more copies of the game on the view cart page, the users will be able to see the subtotal as soon as they add or reduce their items. 
 
@@ -50,7 +50,7 @@ View wireframes for both desktop and mobile here: https://docs.google.com/docume
 ### (ii) Features to implement in the future
 In the future, I would like to create a function for the unique steam ID to be sent to the users email address once they have successfully completed payment. 
 
-I would also like to include option to edit and update reviews. 
+I would also like to include an option to edit and update reviews. 
 
 Another feature to implement in the future includes allowing registered and logged in users who have created their reviews to only edit and update their reviews - they will not be able to edit other users' reviews. 
 
@@ -88,7 +88,7 @@ This site was tested across multiple devices multiple mobile devices
 
 Website tested on mobile and on laptop mode : https://drive.google.com/drive/folders/1-eJxjByE_b5XR4rv-MGpQLcyzqR0ku33?usp=sharing
 
-(ii) Browser Compatability
+(ii) Browser Compatibility
 
 This site was tested across multiple devices multiple mobile devices 
 (iPhone 4, 5, 7: Chrome and Safari, iPad, Samsung Galaxy) to ensure compatibility and responsiveness.)
@@ -101,12 +101,12 @@ This site was tested across multiple devices multiple mobile devices
 
 | Test Case(s)        | Description           | Outcome |
 | :------------- |:-------------| :-----|
-| 1      | When user clicks on the Happy Browsing button on the bottom of the homepage, they will be re-directed to the games catalog page. | Pass  |
-| 2      | When user clicks on the hamburger icon, it will open a full-screen overlay to display the pages in the website. | Pass  |
-| 3      | When superuser clicks on the create game button, they will be re-directed to a form that allows them to create a game. | Pass  |
+| 1      | When a user clicks on the Happy Browsing button on the bottom of the homepage, they will be redirected to the games catalog page. | Pass  |
+| 2      | When user clicks on the hamburger icon, it will open a full-screen overlay to display the pages on the website. | Pass  |
+| 3      | When superuser clicks on the create game button, they will be redirected to a form that allows them to create a game. | Pass  |
 | 4      | When superuser clicks on the edit or delete button, they are able to update the game and delete it if they choose to. | Pass  |
 | 5      | When a logged in user clicks add to cart, they will be able to view cart and review their purchase | Pass  |
-| 6      | Registered user wants to add or reduce items in cart. | Pass  |
+| 6      | Registered users want to add or reduce items in carts. | Pass  |
 | 7      |Registered users can view the subtotal of items.| Pass  |
 | 8      |Registered users can checkout items and complete payment for their purchase.| Pass  |
 | 9     |Images throughout the website are responsive.| Pass  |
@@ -119,7 +119,7 @@ No bugs found.
 ### Media 
 
 All images and game content were taken from https://store.steampowered.com/. 
-All rights goes to Steam, a video game digital distribution service by Valve.
+All rights go to Steam, a video game digital distribution service by Valve.
 
 ### Acknowledgements
 
