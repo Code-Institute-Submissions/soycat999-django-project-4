@@ -124,6 +124,11 @@ font-family: 'Orbitron', sans serif;
   height: auto;
 }
 
+.logo {
+  width: 100%;
+  height: auto;
+}
+
 
 /*---responsive images on games template---*/
 .responsive-img {
@@ -159,20 +164,6 @@ div.footer {
   color: white;
 }
 
-
-
-
-
-    /*---footer styling---*/
-
-    /*div.textcopyright {*/
-    /*  color: white;*/
-    /*  text-align: center;*/
-    /*  padding: 10px;*/
-    /*  font-family: 'Oxanium', sans-serif;*/
-    /*  background: teal;*/
-    /*  font-size: 20px;*/
-    /*}*/
 
 
 /*---media queries for smartphones---*/
@@ -215,3 +206,6 @@ body.mybody{
     margin-bottom: 10px;
     padding: 0px;
 }
+
+/*--styling for automatic slideshow--*/
+.mySlides {display:none;}
