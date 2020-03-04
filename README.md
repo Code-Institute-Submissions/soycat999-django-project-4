@@ -2,9 +2,41 @@
 
 This project focuses on the website development for an e-commerce store that sells games and allows users to leave reviews. The website is designed to be intuitive and easy to navigate. It is targeted towards users interested in purchasing games and being involved in the community. 
 
+# User Authentication and Restriction
+
+Unregistered users are able to view the game catalog, search for games and read reviews.
+
+Logged in users are able to search for games, add games to cart and leave reviews, whereas superusers are able to create, delete, edit games and delete reviews. 
+
+Please register as a new user to add games to cart and add reviews. 
+
+- To log in as user without CRUD rights:
+```
+Username: karen
+Password: karen123456
+```
+
+
+- To log in as a superuser with CRUD rights:
+```
+Username: soycat
+Password: dead123
+```
+
+
+- To test checkout please key in the following credit card details:
+```
+Email: -any email address of your choosing-
+Card information: 4242 4242 4242 4242
+MM/YY: 12 / 23
+CVC: -any number of your choosing-
+Name on card: -any name of your choosing-
+Country: -any country of your choosing-
+```
+
 ## Demo
 
-A live demo of the website can be found here: https://django-angie.herokuapp.com/home/
+A live demo of the website can be found here: https://django-angie.herokuapp.com/
 
 
 ## Project Strategy and Scope
