@@ -33,7 +33,7 @@ A live demo of the website can be found here: https://django-angie.herokuapp.com
 
 ### (ii) Wireframes here.
 
-View wireframes for both desktop and mobile here: https://docs.google.com/document/d/1EXbarzoNlgPHfAAtar7pMNcObNwsNRzCSKVN2oFSOc8/edit?usp=sharing
+View wireframes for both desktop and mobile here (With superuser access): https://django-angie.herokuapp.com/home/
 
 ## Project Skeleton
 ### (i) Existing Features
@@ -86,7 +86,7 @@ After checkout, users are only prompted with a message that they have completed 
 This site was tested across multiple devices multiple mobile devices 
 (iPhone 4, 5, 7: Chrome and Safari, iPad, Samsung Galaxy) to ensure compatibility and responsiveness.)
 
-Website tested on mobile and on laptop mode : https://drive.google.com/drive/folders/1-eJxjByE_b5XR4rv-MGpQLcyzqR0ku33?usp=sharing
+Website tested on mobile and on laptop mode : https://drive.google.com/drive/folders/1eXXZJ-KAFP3x6hsD6yvrta8Y9Bb4bOF6?usp=sharing
 
 (ii) Browser Compatibility
 
@@ -115,6 +115,11 @@ This site was tested across multiple devices multiple mobile devices
 
 ## Bugs Discovered
 No bugs found. 
+
+## Deployment
+My code was written using AWS. AWS serves as the local repository before it is deployed to GitHub. New commits made on the master branch will update the deployed site in real time. I add new changes and commit them in bash in AWS, before git pushing it to my GitHub. After all the changes have been made, and I'm done making minor changes to my project, I type git push heroku master into the bash so that my code is deployed in Heroku.
+
+To access my project in GitHub, I will find it under Repositories to check if all my commits are up-to-date. To access my project under Heroku, I will select django-angie (the app name I provided for Heroku) and view my project. When I click django-project-4, it will redirect me to another page that records all my activity. On the top hand side, there is an open app button that will let me access my website.
 
 ### Media 
 
