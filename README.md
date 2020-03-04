@@ -147,3 +147,20 @@ Stackoverflow for debugging and other programming questions:
 
 https://stackoverflow.com/
 
+https://stackoverflow.com/questions/11175856/django-python-databaseerror-x-table-has-no-column-named-y/43249130
+
+https://stackoverflow.com/questions/32047686/how-can-i-remove-extra-s-from-django-admin-panel
+
+https://stackoverflow.com/questions/35748734/django-local-variable-form-referenced-before-assignment
+
+https://stackoverflow.com/questions/2771676/django-datetime-issues-default-datetime-now
+
+https://stackoverflow.com/questions/32047686/how-can-i-remove-extra-s-from-django-admin-panel
+
+https://stackoverflow.com/questions/44573083/django-could-not-parse-the-remainder
+
+https://stackoverflow.com/questions/20779128/django-can-not-find-the-css-file-specified-in-html-file
+
+https://stackoverflow.com/questions/11175856/django-python-databaseerror-x-table-has-no-column-named-y/43249130
+
+https://stackoverflow.com/questions/11175856/django-python-databaseerror-x-table-has-no-column-named-y/43249130
