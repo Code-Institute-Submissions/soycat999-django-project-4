@@ -26,7 +26,7 @@ SECRET_KEY = '-afc)g4vdavtlk#*2&il5fvhh$0uof9g$it11rxa0wy!u2ke+u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["django-angie.herokuapp.com/home",'*']
+ALLOWED_HOSTS = ["django-angie.herokuapp.com",'*']
 
 
 # Application definition
