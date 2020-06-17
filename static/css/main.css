@@ -1,256 +1,405 @@
 body {
-  padding:0; 
-  margin:0; 
+  padding: 0;
+  margin: 0;
   background-color: #e4e4e6;
 }
 p {
   font-family: 'Open Sans', sans-serif;
 }
+
+/*Index Style*/
 main {
   height: 100vh;
-  margin : 0;
+  margin: 0;
   background-image: url(../images/main-pic.png);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  
+  padding: 0px;
   display: flex;
-  align-items : flex-end;
+  justify-content: center;
+  align-items: flex-end;
 }
-.overlay{
-  height :100vh;
-  width : 100%;
-  position: absolute;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 1;
+.overlay {
+  position: fixed; 
+  width: 100%; 
+  height: 100%; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1; 
 }
-main div {
-  z-index : 2;
-}
+
 main h1 {
   font-family: 'Lato', sans-serif;
-  font-size: 4rem;
-  color : white;
+  /*font-size: 4rem;*/
+  color: white;
 }
 main p {
-  font-size: 1.2rem;
-  color : white;
-
+  /*font-size: 1.2rem;*/
+  color: white;
+  text-align: justify;
 }
 
-
+/*Catalog styling*/
+#section-catalog{
+  min-height: 200vh;
+  height : auto;
+  margin: 0;
+  background-image: url(../images/section-catalog-pic.jpeg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px; 
+}
+.holder {
+  z-index : 2;
+}
 /*Custom CSS */
 .bg-cover {
-  background-color: rgba(0,0,0, 0.5);
-}
-.fs-1{
-  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-/*div.container-fluid {*/
-/*  font-family:'Oxanium', sans serif;*/
-/*  color:#34ebeb;*/
-/*}*/
+@media screen and (min-width: 768px) {
+  /*Index Style*/
+  main {
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  /*Index Style*/
+  main {
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /*Index Style*/
+  main h1 {
+    font-size: 4rem;
+  }
+  main p {
+    font-size: 1.2rem;
+  }
+}
+
+
 
 /*body.mybody {*/
+
 /*  background: black;*/
+
 /*  font-size: 15px*/
 
 /*}*/
 
-
 /*---css for nav overlay---*/
+
 /*.overlay {*/
+
 /*  height: 0%;*/
+
 /*  width: 100%;*/
+
 /*  position: fixed;*/
+
 /*  z-index: 1;*/
+
 /*  top: 0;*/
+
 /*  left: 0;*/
+
 /*  background-color: rgb(0,0,0);*/
+
 /*  background-color: rgba(0,0,0, 0.8);*/
+
 /*  overflow-y: hidden;*/
+
 /*  transition: 0.5s*/
+
 /*}*/
 
 /*.overlay-content {*/
+
 /*  position: absolute;*/
+
 /*  top: 25%;*/
+
 /*  width: 100%;*/
+
 /*  text-align: center;*/
+
 /*  margin-top: 30px;*/
+
 /*}*/
 
 /*.overlay a {*/
+
 /*  padding: 8px;*/
+
 /*  text-decoration: none;*/
+
 /*  font-size: 36px;*/
+
 /*  color: #34ebeb;*/
+
 /*  display: block;*/
+
 /*  transition: 0.3s;*/
+
 /*  font-family: 'Oxanium', sans serif;*/
 
 /*}*/
 
 /*.overlay a:hover, .overlay a:focus {*/
+
 /*  color: #34ebeb;*/
+
 /*}*/
 
 /*.overlay .closebtn {*/
+
 /*  position: absolute;*/
+
 /*  top: 20px;*/
+
 /*  right: 45px;*/
+
 /*  font-size: 60px;*/
+
 /*}*/
 
 /*@media screen and (min-width: 300px){*/
+
 /*  .overlay {overflow-y: auto;}*/
+
 /*  .overlay a {font-size: 30px}*/
+
 /*  .overlay .closebtn {*/
+
 /*  font-size: 40px;*/
+
 /*  top: 15px;*/
+
 /*  right: 35px;*/
+
 /*  }*/
+
 /*}*/
 
-
 /*.hamburger {*/
-/*position:fixed;*/
-/*display: flex;*/
-/*font-size:30px;*/
-/*cursor:pointer;*/
-/*color:#34ebeb;*/
-/*color:white;*/
-/*float:right;*/
-/*width: 50px;*/
 
+/*position:fixed;*/
+
+/*display: flex;*/
+
+/*font-size:30px;*/
+
+/*cursor:pointer;*/
+
+/*color:#34ebeb;*/
+
+/*color:white;*/
+
+/*float:right;*/
+
+/*width: 50px;*/
 
 /*}*/
 
 /*---end of css nav overlay---*/
 
 /*---JS for custom carousel---*/
+
 /*.carousel-inner > .item > img,*/
+
 /*  .carousel-inner > .item > a > img {*/
+
 /*    margin: auto;*/
+
 /*    display: block;*/
+
 /*    max-width: 50%;*/
+
 /*    height: auto;*/
+
 /*}*/
-  
- 
+
 /*  .container:hover .middle {*/
+
 /*  opacity: 1;*/
+
 /*}*/
 
 /*.middle {*/
+
 /*  transition: .5s ease;*/
+
 /*  opacity: 0;*/
+
 /*  position: absolute;*/
+
 /*  top: 50%;*/
+
 /*  left: 50%;*/
+
 /*  transform: translate(-50%, -50%);*/
+
 /*  -ms-transform: translate(-50%, -50%);*/
- 
+
 /*}*/
 
 /*.text {*/
+
 /*font-family: 'Orbitron', sans serif;*/
+
 /*  background: #34ebeb;*/
+
 /*  color: #000000;*/
+
 /*  font-size: 20px;*/
+
 /*  padding: 16px 32px;*/
+
 /*  text-align: center;*/
+
 /*} */
 
-
 /*.top-image {*/
+
 /*  width: 100%;*/
+
 /*  height: auto;*/
+
 /*}*/
 
 /*.logo {*/
-/*  width: 100%;*/
-/*  height: auto;*/
-/*}*/
 
+/*  width: 100%;*/
+
+/*  height: auto;*/
+
+/*}*/
 
 /*---responsive images on games template---*/
+
 /*.responsive-img {*/
+
 /*  max-width: 100%;*/
+
 /*  height: auto;*/
+
 /*}*/
 
-
 /*---media queries for custom javascript carousel---*/
-
 
 /* Responsive layout - makes the 
 three columns stack on top of each 
 other instead of next to each other */
+
 /*@media screen and (max-width: 500px) {*/
+
 /*div.card-title card-text {*/
+
 /*    width: 100%;*/
+
 /*  }*/
+
 /*}*/
 
 /*---styling for footer---*/
 
- /*footer bar styling*/
-     
+/*footer bar styling*/
+
 /*div.footer {*/
+
 /*  position:absolute;*/
+
 /*  right: 0;*/
+
 /*  left: 0;*/
+
 /*  padding: 1rem;*/
+
 /*  background-color: teal;*/
+
 /*  text-align: center;*/
+
 /*  font-family: 'Oxanium', sans-serif;*/
+
 /*  color: white;*/
+
 /*}*/
-
-
 
 /*---media queries for smartphones---*/
 
 /*@media screen and (min-width:320px){*/
+
 /*.about-text p {*/
+
 /*    font-size: 25px;*/
+
 /*  }*/
+
 /*}*/
 
 /*---media queries for text on screens more than 600px---*/
+
 /*@media screen and (max-width:600px) {*/
+
 /*.about-text p {*/
+
 /*  font-size: 15px;*/
-/*}*/
+
 /*}*/
 
+/*}*/
 
 /*@media screen and (min-width:320px){*/
+
 /*body.mybody{*/
+
 /*font-size: 25px;*/
+
 /*  }*/
+
 /*}*/
 
 /*---media queries for text on screens more than 600px---*/
+
 /*@media screen and (max-width:600px) {*/
+
 /*body.mybody{*/
+
 /*  font-size: 15px;*/
+
 /*}*/
+
 /*}*/
 
 /*.logout-text {*/
+
 /*  font-family: 'Oxanium', sans serif;*/
+
 /*}*/
 
 /*---styling for cards on games catalog page---*/
 
 /*.ol, ul {*/
+
 /*    margin-top: 0;*/
+
 /*    margin-bottom: 10px;*/
+
 /*    padding: 0px;*/
+
 /*}*/
 
 /*--styling for automatic slideshow--*/
+
 /*.mySlides {display:none;}*/
