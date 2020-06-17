@@ -1,12 +1,9 @@
-{% extends 'base.html' %}
-
-
-{%block content%}
-    <h1>Are you sure you want to delete this game</h1>
-    <p>Game Title: {{games.title}}</p>
-    <form method='POST' action='{% url "delete_games" games_id=games.id %}'>
-        {% csrf_token %}
-        <input type='submit' value='Yes, delete'>
-        <a href='{% url "show_games" %}'>No</a>
-    </form>
+{% extends 'base.html' %} {%block content%}
+<h1>Are you sure you want to delete this game</h1>
+<p>Game Title: {{games.title}}</p>
+<form method='POST' action='{% url "delete_games" games_id=games.id %}'>
+    {% csrf_token %}
+    <input type='submit' value='Yes, delete'>
+    <a href='{% url "show_games" %}'>No</a>
+</form>
 {% endblock %}

@@ -2,86 +2,83 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <!--Bootstrap-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+  <!--W3School Css Link-->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   
-<link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+  <!----Custom CSS---->
+  <link rel="stylesheet" href="{% static '/css/main.css' %}" type="text/css">
+  
+  <title>Pixie Games | Best Movies Reviews </title>
+</head>
 
-<!----Link to CSS---->
-    <link rel="stylesheet" href="{% static '/css/main.css' %}" type="text/css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Pixie Games</title>
-  </head>
-  <body class='mybody'>
-      
-      <!-----nav bar----->
-<div class="container-fluid">
-<div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="overlay-content">
-    <a href="/">Home</a>
-    <a href="/catalog">Games</a>
-    <a href="/users/reviews">Community Reviews</a>
-{% if user.is_authenticated %}
-    <a href="/cart/">Cart</a>
-    <a href="/accounts/logout/">Logout</a>
-    {% else %}
-     <a href="/accounts/login">Login</a>
-    <a href="/users/signup">Register</a>
-{% endif %}
-	
-
-  </div>
-</div>
-
-<div class="hamburger" onclick="openNav()">&#9776;</div>
-</div>
-<!-----JS for Nav----->
-
-<script>
-function openNav() {
-  document.getElementById("myNav").style.height = "100%";
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.height = "0%";
-}
-
-</script>
-
-<!-----alert message----->
-    <div class='container-fluid'>
-      <div class='header'>
-        {% if user.is_authenticated %}
-        <a href="{% url 'view_cart' %}">Your Cart: ({{number_of_items}})</a>
-        {% endif %}
+<body class='mybody'>
+  <!-----nav bar----->
+  <div class="container-fluid">
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+        <a href="/">Home</a>
+        <a href="/catalog">Games</a>
+        <a href="/users/reviews">Community Reviews</a> {% if user.is_authenticated %}
+        <a href="/cart/">Cart</a>
+        <a href="/accounts/logout/">Logout</a> {% else %}
+        <a href="/accounts/login">Login</a>
+        <a href="/users/signup">Register</a> {% endif %}
       </div>
-        {% if messages %}
-      <div class='alert alert-success'>
-       
-          <div>
-              {% for message in messages %} {{ message }} {% endfor %}
-          </div>
-     
-      </div>
-         {% endif %}
-        {%block content%}{%endblock%}
     </div>
+    <div class="hamburger" onclick="openNav()">&#9776;</div>
   </div>
+  <!-----JS for Nav----->
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+  </script>
+
+  <!-----alert message----->
+  <div class='container-fluid'>
+    <div class='header'>
+      {% if user.is_authenticated %}
+      <a href="{% url 'view_cart' %}">Your Cart: ({{number_of_items}})</a> 
+      {% endif %}
+    </div>
+    {% if messages %}
+    <div class='alert alert-success'>
+      <div>
+        {% for message in messages %} {{ message }} {% endfor %}
+      </div>
+    </div>
+    {% endif %} 
+    {%block content%} {%endblock%}
   </div>
   <br>
-   <!-----footer-copyright----->
-    <footer>
-      <div class="footer">
+  
+
+  
+  <!-----footer-copyright----->
+  <footer>
+    <div class="footer">
       Copyright 2019. Website built by Angelia. All rights reserved. For educational purposes only.
     </div>
   </footer>
-
+  <!--Bootstrap JS-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
- </body>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>    
+
+</body>
 </html>

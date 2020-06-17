@@ -1,15 +1,6 @@
-{% extends 'base.html' %}
-
-{% load crispy_forms_tags %}
-
-
-{%block content%}
-
-<body>
-    {{form.media}}
-    <form method='POST' enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <input type='submit' value='Create Games'/>
-    </form>
+{% extends 'base.html' %} {% load crispy_forms_tags %} {%block content%} {{form.media}}
+<form method='POST' enctype="multipart/form-data">
+    {% csrf_token %} {{ form|crispy }}
+    <input type='submit' value='Create Games' />
+</form>
 {% endblock %}

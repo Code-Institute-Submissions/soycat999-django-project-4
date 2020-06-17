@@ -1,12 +1,9 @@
-{% extends 'base.html' %}
-
-
-{%block content%}
-    <h1>Games</h1>
-    <ul>
+{% extends 'base.html' %} {%block content%}
+<h1>Games</h1>
+<ul>
     {% for c in all_category %}
-        <li>{{c.Genre}} : Tags->: {{c.Tags}}
-        </li>    
+    <li>{{c.Genre}} : Tags->: {{c.Tags}}
+    </li>
     {% endfor %}
-    </ul>
+</ul>
 {% endblock %}
