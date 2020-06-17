@@ -3,15 +3,18 @@ body {
   margin: 0;
   background-color: #e4e4e6;
 }
-p {
+body, p {
   font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Lato', sans-serif;
 }
 
 /*Index Style*/
 main {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  background-image: url(../images/main-pic.png);
+  background-image: url(../images/main-img.png);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,6 +33,7 @@ main {
   bottom: 0;
   background-color: rgba(0,0,0,0.6);
   z-index: 1; 
+  /*cursor :  ;*/
 }
 
 main h1 {
@@ -45,14 +49,16 @@ main p {
 
 /*Catalog styling*/
 #section-catalog{
-  min-height: 200vh;
+  min-height: 100vh;
   height : auto;
   margin: 0;
-  background-image: url(../images/section-catalog-pic.jpeg);
-  background-position: top;
+  padding: 0px; 
+
+  /*background-image: url(../images/section-catalog-img.jpg);*/
+  background-color: black;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 0px; 
 }
 .holder {
   z-index : 2;

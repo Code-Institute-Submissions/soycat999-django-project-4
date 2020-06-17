@@ -10,7 +10,7 @@ def show_games(request):
     if 'title' in request.GET:
         all_games = all_games.filter(title=request.GET.get('title'))
         print("title received: ", request.GET.get('title'))
-    return render(request, 'games.html', {
+    return render(request, 'game_list.html', {
         'all_games':all_games
     })
     

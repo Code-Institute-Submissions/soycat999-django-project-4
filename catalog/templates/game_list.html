@@ -1,0 +1,70 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{%block content%}
+<section id='section-catalog'>
+    <div class="p-5"></div>
+    <div class="row p-md-2 p-4">
+        <!--search bar-->
+        <div class="col-md-9 col-12 mx-auto">
+            {% if not all_games %} cannot find any match {% endif %}
+            <form action="" method="GET">
+                <input class="form-control mr-sm-2" type="textbox" name="title" placeholder="Enter the title you searching for" aria-label="Search">
+                <br/>
+                <button class="btn btn-outline-dark bg-light my-2 my-sm-0" type="submit">Search</button>
+                <a href="{% url 'show_games' %}" class='btn btn-dark'>Reset Search</a>
+            </form>
+        </div>
+        <!--Section header-->
+        <div class="col-md-9 col-12 text-light font-weight-bold mx-auto">
+            <h2>Featured Games</h2>
+        </div>
+        {% for c in all_games %}
+        <!--layout for each game listing-->
+        <div class="col-lg-4 col-md-6 col-12 p-md-5 p-3 text-light">
+            <div class="row">
+                <!-- game image-->
+                <div class="col-12 mx-auto text-center">
+                    {%if c.image %}
+                    <img src="/{{c.image}}" class="img-fluid" /> 
+                    {%endif%}
+                </div>
+                <!--game title-->
+                <div class="col-12 mx-auto">
+                    <h3 class=''>
+                        {{c.title}} 
+                        <span class='badge badge-danger px-2 py-1 ml-5'><small>{{c.category}}</small></span>
+                    </h3> 
+                </div>
+                <!--publisher and release date -->
+                <div class="col-12 mx-auto">
+                    {% if user.is_superuser %}
+                    <span class='text-muted font-italic'>
+                        <a href="{% url 'update_games' games_id=c.id %}"><small><u>Edit</u></small></a> /
+                        <a href="{% url 'confirm_delete' games_id=c.id %}"><small class='text-danger'>Delete</small></a>
+                    </span><br/>
+                    {% endif %}
+                    <small><strong class='text-muted font-italic'>Publisher: </strong>{{c.publisher}} </small><br/>
+                    <span><small class='text-muted font-italic'>Release Date and Time: {{c.release_date}}</small></span>
+                </div>
+                <!--description of game-->
+                <div class="col-12 mx-auto m-1">
+                    <p>{{c.desc}}</p>
+                </div>                    
+                <!--game pricing-->
+                <div class="col-12 mx-auto">
+                    <strong>Price:</strong> SGD {{c.price}}
+                </div>
+                <!--buttons-->
+                {% if user.is_authenticated %}
+                <div class="col-12 mx-auto">
+                    <a href="{% url 'add_to_cart' games_id=c.id %}" class='btn btn-warning p-1'><small>Add to Cart</small></a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</section>
+{% endblock %}
