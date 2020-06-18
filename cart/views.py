@@ -32,7 +32,7 @@ def add_to_cart(request, games_id):
         
 def view_cart(request):
     cart = request.session.get('shopping_cart', {})
-    return render(request, 'cart/view_cart.template.html', {
+    return render(request, 'view_cart.html', {
         'shopping_cart': cart
     })
     

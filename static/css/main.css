@@ -66,6 +66,11 @@ main p {
   padding: 0px; 
   background:pink;
 }
+
+/*Cart styling*/
+#section-cart {
+  min-height : 100vh;
+}
 .review {
   min-height : 200px;
 }
@@ -75,6 +80,12 @@ main p {
 }
 .holder {
   z-index : 2;
+}
+.icon {
+  text-decoration: none;
+  font-size: 1rem;
+  color : darkgrey;
+  font-weight: bold;
 }
 @media screen and (min-width: 768px) {
   /*Index Style*/

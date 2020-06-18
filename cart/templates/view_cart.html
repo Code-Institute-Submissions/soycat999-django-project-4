@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {%block content%}
+
+<section id='section-cart' class='p-md-5 p-3 bg-dark d-flex justify-content-center align-items-center'>
+    <div class="row bg-light p-5 rounded">
+        <div class="col-12">
+            <h3 class='text-dark'> View Cart <i class="fas fa-shopping-cart text-warning"></i></h3>
+        </div>
+        <hr/>
+        <div class="col-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Game Title</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col" class="text-center">Price</th>
+                        <th scope="col" class="text-right">Sub-total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for id, games in cart.items %}
+                    <tr>
+                        <th scope="row"><b>{{games.title}}</b></th>
+                        <td>
+                            <a href="/cart/remove_qty/{{games.id}}"><i class="fas fa-minus icon"></i> </a> 
+                            <span class='m-1'> {{games.qty}} </span>
+                            <a href="/cart/add_qty/{{games.id}}"><i class="fas fa-plus icon"></i></i></a>
+                        </td>
+                        <td class="text-center"> $ {{games.cost}}</td>
+                        <td class="text-right"> $ {{games.subtotal}}</td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+            <a href="{% url 'show_games' %}" class='btn btn-secondary mr-1'>Back To Games</a>
+            <a href="../checkout" class='btn btn-warning'>Checkout</a>
+        </div>
+    </div>
+
+</section>
+{% endblock %}
