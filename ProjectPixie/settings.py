@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'users',
     'cart',
     'checkout',
+    'reviews',
     'pyuploadcare.dj',
 ]
 

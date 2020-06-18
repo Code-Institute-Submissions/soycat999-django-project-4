@@ -3,13 +3,11 @@ from django.contrib.auth import logout as dj_logout
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
-from .forms import ReviewsForm
-from .models import Reviews
 from django.contrib import messages
 
-
-
 # Create your views here.
+
+#   Registration new user
 def signup(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -22,50 +20,24 @@ def signup(request):
             return redirect('home')
     else:
         form = UserCreationForm()
-    return render(request, 'users/signup.template.html', {
+    return render(request, 'signup.html', {
         'form': form
         
     })
-            
+           
+#   Profile 
 @login_required
 def profile(request):
-    return render(request, 'users/profile.template.html',{
+    return render(request, 'profile.html',{
         'current_user':request.user
     })
 
-
+#   Logout function
+@login_required
 def logout(request):
     dj_logout(request)
     messages.success(request, "Logged out successfully!")
-    return render(request, 'users/logout.html')
-def reviews(request):
-    all_reviews = Reviews.objects.all()
-    return render(request, 'users/reviews.template.html',{
-        'all_reviews':all_reviews
-    })
-    
-@login_required
-def create_reviews(request):
-    create_reviews_form=ReviewsForm()
-    if request.method == 'POST':
-        create_reviews_form = ReviewsForm(request.POST)
-        if create_reviews_form.is_valid():  
-            # flash message
-            newly_created_reviews = create_reviews_form.save()
-            messages.success(request, "Reviews for" + " " + newly_created_reviews.title + " has been created!")
-    return render(request, 'users/create_reviews.template.html', {
-        'form':create_reviews_form
-    }) 
+    return render(request, 'logout.html')
 
-@login_required
-def delete_reviews(request, reviews_id):
-    delete_reviews = get_object_or_404(Reviews, pk=reviews_id)
-    return render(request, 'users/delete_reviews.template.html', {
-        'reviews':delete_reviews
-    })
 
-@login_required
-def actually_delete_reviews(request, reviews_id):
-    reviews_being_deleted = get_object_or_404(Reviews, pk=reviews_id)
-    reviews_being_deleted.delete()
-    return redirect(reverse('reviews'))
+

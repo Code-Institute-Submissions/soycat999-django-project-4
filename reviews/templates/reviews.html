@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{%block content%}
+<section id='section-reviews'>
+    <div class="p-5"></div>
+    <div class="row p-3">
+        <div class="col-10 mx-auto">
+            <h2>Games Reviews</h2>
+            {% if user.is_authenticated %}
+            <a href="{% url 'create_reviews' %}" class='btn btn-dark'><small>Add Reviews</small></a>
+            {% endif %}
+        </div>
+        
+        {% for c in all_reviews %}
+        <div class="review col-10 rounded bg-secondary text-light p-3 m-2 mx-auto">
+            <div>
+                <blockquote class="blockquote">
+                    <p class="mb-0">
+                        <h4>{{c.title}}</h4>
+                        "{{c.reviews}}"</p>
+                        <i>Rating : {{c.rating}} / 10</i>
+                    <footer class="blockquote-footer text-light"><cite title="Source Title">by - {{c.username}}</cite></footer>
+                </blockquote>
+                <small><span class='text-light font-italic'>Posted on : {{c.posted_on}}</span>
+                {% if user.is_superuser %}
+                <span><a href='{% url "delete_reviews" reviews_id=c.id %}' class='font-italic text-danger p-2 ml-2'><u>Remove</u></a></span>
+                {% endif %}
+                </small>
+                
+            </div>
+            
+        </div>
+        
+        {% endfor %}
+    </div>
+</section>
+
+
+{% endblock %}
+
+     </br>
+     <div class="text-review">
+       
+        </div>
+        <br>
+         

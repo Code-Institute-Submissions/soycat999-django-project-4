@@ -35,7 +35,6 @@ main {
   z-index: 1; 
   /*cursor :  ;*/
 }
-
 main h1 {
   font-family: 'Lato', sans-serif;
   /*font-size: 4rem;*/
@@ -50,24 +49,33 @@ main p {
 /*Catalog styling*/
 #section-catalog{
   min-height: 100vh;
-  height : auto;
   margin: 0;
   padding: 0px; 
 
-  /*background-image: url(../images/section-catalog-img.jpg);*/
-  background-color: black;
-  background-position: left;
+  /*background-image: url(../images/section-img.jpeg);*/
+  background: black;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.holder {
-  z-index : 2;
+
+/*Review styling*/
+#section-review {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0px; 
+  background:pink;
+}
+.review {
+  min-height : 200px;
 }
 /*Custom CSS */
 .bg-cover {
   background-color: rgba(0, 0, 0, 0.5);
 }
-
+.holder {
+  z-index : 2;
+}
 @media screen and (min-width: 768px) {
   /*Index Style*/
   main {

@@ -35,7 +35,7 @@ def create_games(request):
     else:
         create_games_form = GamesForm()
     
-    return render(request, 'catalog/create_games.template.html', {
+    return render(request, 'create_game.html', {
         'form':create_games_form
     })
     
@@ -57,7 +57,7 @@ def update_games(request, games_id):
     else:
         update_games_form = GamesForm(instance=games_being_updated)
         
-    return render(request, 'catalog/update_games.template.html', {
+    return render(request, 'update_game.html', {
         'form':update_games_form
     })
     
@@ -66,7 +66,7 @@ def update_games(request, games_id):
 @login_required
 def confirm_delete_games(request, games_id):
     games_being_deleted = get_object_or_404(Games, pk=games_id)
-    return render(request, 'catalog/confirm_delete_games.template.html', {
+    return render(request, 'confirm_delete_game.html', {
         'games':games_being_deleted
     })
     
@@ -78,6 +78,6 @@ def actually_delete_games(request, games_id):
     
 def show_category(request):
     all_category = Category.objects.all()
-    return render(request, 'catalog/catalog.template.html', {
+    return render(request, 'catalog.html', {
         'all_category':all_category
     })

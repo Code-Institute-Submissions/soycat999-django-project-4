@@ -1,6 +1,6 @@
 {% extends 'base.html' %} 
 {% load static %}
-
+{% block navclass %} class="navbar navbar-expand-lg navbar-dark bg-dark fs-1 fixed-top py-md-3 py-2" {% endblock %}
 {%block content%}
 <section id='section-catalog'>
     <div class="p-5"></div>
@@ -58,7 +58,7 @@
                 <!--buttons-->
                 {% if user.is_authenticated %}
                 <div class="col-12 mx-auto">
-                    <a href="{% url 'add_to_cart' games_id=c.id %}" class='btn btn-warning p-1'><small>Add to Cart</small></a>
+                    <a href="{% url 'add_to_cart' games_id=c.id %}" class='btn btn-light p-1'><small>Add to Cart</small></a>
                 </div>
                 {% endif %}
             </div>
