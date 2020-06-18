@@ -68,7 +68,7 @@ main p {
   margin: 0;
   padding: 0px; 
   background-image: url(../images/section-logout-img.jpg);
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
   
@@ -77,6 +77,23 @@ main p {
   align-items:center;
 }
 #section-logout div:nth-child(1){
+  z-index: 2;
+}
+/*Register*/
+#section-register{
+  min-height: 100vh;
+  margin: 0;
+  padding: 0px; 
+  background-image: url(../images/section-register-img.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+#section-register div:nth-child(1){
   z-index: 2;
 }
 /*Catalog styling*/
@@ -128,6 +145,9 @@ main p {
   }
   #section-login{
     justify-content: flex-end;
+  }
+  #section-register{
+    justify-content:flex-start;    
   }
 }
 
