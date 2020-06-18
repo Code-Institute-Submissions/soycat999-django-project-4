@@ -3,7 +3,7 @@ from django.contrib.auth import logout as dj_logout
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
-from django.contrib import messages
+from django.contrib import auth, messages
 
 # Create your views here.
 
@@ -35,9 +35,9 @@ def profile(request):
 #   Logout function
 @login_required
 def logout(request):
-    dj_logout(request)
-    messages.success(request, "Logged out successfully!")
+    # dj_logout(request)
+    auth.logout(request)
+    # messages.success(request, "Logged out successfully!")
     return render(request, 'logout.html')
-
 
 

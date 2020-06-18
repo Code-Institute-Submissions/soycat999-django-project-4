@@ -1,6 +1,20 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
-{% block content %}
-  <p>Logged out!</p>  
-  <a href="{% url 'login'%}">Click here to login again.</a>
+{%block content%}
+
+<section id='section-logout' class='p-md-5 p-3 text-light'>
+    <div class="row">
+      <div class="col">
+        <h3>Sorry to see you go but we will meet again in </h3>
+        <h2>PIXIE GAME !</h2>
+        <a class='btn btn-light' href="{% url 'login'%}">Click here to go back again.</a>
+
+      </div>
+    </div>
+    <div class="overlay"></div>
+</section>
 {% endblock %}
+
+
+
