@@ -45,7 +45,23 @@ main p {
   color: white;
   text-align: justify;
 }
-
+/*Login*/
+#section-login{
+  min-height: 100vh;
+  margin: 0;
+  padding: 0px; 
+  background-image: url(../images/section-img.jpeg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+#section-login div:nth-child(1){
+  z-index: 2;
+}
 /*Catalog styling*/
 #section-catalog{
   min-height: 100vh;
@@ -92,6 +108,9 @@ main p {
   main {
     justify-content: center;
     align-items: flex-end;
+  }
+  #section-login{
+    justify-content: flex-end;
   }
 }
 
