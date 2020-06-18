@@ -21,10 +21,13 @@ def create_reviews(request):
         if create_reviews_form.is_valid():  
             # flash message
             newly_created_reviews = create_reviews_form.save()
-            messages.success(request, "Reviews for" + " " + newly_created_reviews.title + " has been created!")
-    return render(request, 'create_review.html', {
-        'form':create_reviews_form
-    }) 
+            # messages.success(request, "Reviews for " + newly_created_reviews.title + " has been created!")
+        return redirect(reverse('reviews'))
+    else :
+        create_reviews_form = ReviewsForm()
+        return render (request, 'create_review.html', {
+            'form' : create_reviews_form,
+        })
 
 @login_required
 def delete_reviews(request, reviews_id):
