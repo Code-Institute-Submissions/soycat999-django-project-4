@@ -54,7 +54,7 @@ pytz==2019.3
 pyuploadcare==2.6.0
 PyYAML==5.2
 regex==2019.12.19
-requests==2.23.0
+requests==2.31.0
 rsa==3.4.2
 s3transfer==0.2.1
 serverlessrepo==0.1.9
